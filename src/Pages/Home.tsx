@@ -38,7 +38,7 @@ const Home = (props: Props) => {
 			</div>
 			<div className="w-[100%] h-[80vh] mx-auto px-[30px]">
 				<div className="text-primary-400 mt-[20px] text-5xl">Trending Now</div>
-				<p>Card</p>
+				<p>Cards</p>
 			</div>
 		</>
 	);
