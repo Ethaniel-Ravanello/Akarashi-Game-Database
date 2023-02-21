@@ -6,17 +6,17 @@ type Props = {};
 const Home = (props: Props) => {
   const [data, setData] = useState([]);
 
-  const getData = async () => {
-    const value = await fetch(
-      `https://api.rawg.io/api/games?key=3d27cad6bbee4c88bbdbe0f255aad396&page=1`
-    );
-    const datas = await value.json();
-    console.log(datas.results);
-  };
+  // const getData = async () => {
+  //   const value = await fetch(
+  //     `https://api.rawg.io/api/games?key=3d27cad6bbee4c88bbdbe0f255aad396&page=1`
+  //   );
+  //   const datas = await value.json();
+  //   console.log(datas.results);
+  // };
 
-  useEffect(() => {
-    getData();
-  }, []);
+  // useEffect(() => {
+  //   getData();
+  // }, []);
 
   return (
     <>
@@ -31,20 +31,20 @@ const Home = (props: Props) => {
         </div>
 
         <div className="absolute mt-[200px] inset-0 text-center">
-          <h1 className=" text-3xl text-primary-400 font-semibold">
+          <h1 className=" text-3xl lg:text-5xl text-primary-400 font-semibold">
             WE ARE AKARASHI
           </h1>
-          <h3 className=" text-1xl lg:text-3xl max-w-[500px] w-fit mt-[40px] mx-auto text-primary-400">
+          <p className=" text-1xl lg:text-3xl leading-8 max-w-[600px] w-fit mt-[40px] mx-auto text-primary-400">
             A Website where you can find any information about game, game
             developer, news, upcoming Game and many more
-          </h3>
+          </p>
         </div>
       </div>
       <div className="w-[100%] h-[80vh] mx-auto px-[30px]">
-        <div className="text-primary-400 mt-[20px] text-7xl font-bold mb-8">
+        <div className="text-primary-400 mt-[20px] text-4xl font-bold mb-8">
           Popular Games
         </div>
-        <div className="grid grid-cols-4 gap-5">
+        <div className="grid grid-cols-4">
           <Card />
           <Card />
           <Card />
