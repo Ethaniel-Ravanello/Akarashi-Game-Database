@@ -6,7 +6,7 @@ type Props = {};
 
 const Card = (props: Props) => {
   return (
-    <div className="bg-primary-500 text-primary-400 max-w-[350px] rounded-xl h-fit cursor-pointer">
+    <div className="bg-primary-500 text-primary-400 w-[420px] rounded-xl h-fit cursor-pointer">
       <div className="mb-5">
         <img src="./Testing.jpg" className="rounded-t-xl" alt="" />
       </div>

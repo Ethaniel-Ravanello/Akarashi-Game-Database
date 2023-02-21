@@ -41,10 +41,18 @@ const Home = (props: Props) => {
         </div>
       </div>
       <div className="w-[100%] h-[80vh] mx-auto px-[30px]">
-        <div className="text-primary-400 mt-[20px] text-5xl font-medium mb-5">
+        <div className="text-primary-400 mt-[20px] text-7xl font-bold mb-8">
           Popular Games
         </div>
-        <Card />
+        <div className="grid grid-cols-4 gap-5">
+          <Card />
+          <Card />
+          <Card />
+          <Card />
+          <Card />
+          <Card />
+          <Card />
+        </div>
       </div>
     </>
   );
