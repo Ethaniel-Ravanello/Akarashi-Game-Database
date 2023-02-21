@@ -6,7 +6,7 @@ type Props = {};
 
 const Card = (props: Props) => {
   return (
-    <div className="bg-primary-500 group mx-auto text-primary-400 mb-5 min-w-[355px] max-w-[395px] rounded-xl h-fit lg:hover:transition lg:hover:ease-in-out  lg:hover:-translate-y-1 lg:hover:scale-110 duration-300">
+    <div className="bg-primary-500 group mx-auto text-primary-400 mb-5 w-[315px] md:w-[400px] rounded-xl h-fit lg:hover:transition lg:hover:ease-in-out  lg:hover:-translate-y-1 lg:hover:scale-110 duration-300">
       <div className="mb-5">
         <img src="./Testing.jpg" className="rounded-t-xl image-full" alt="" />
       </div>
@@ -31,7 +31,7 @@ const Card = (props: Props) => {
         </div>
       </div>
 
-      <div className="hidden text-sm px-5 pb-5 group-hover:block group-hover:absolute bg-primary-500 text-primary-600 h-fit mt-[-10px] rounded-b-xl ">
+      <div className="hidden w-[315px] md:w-[400px] text-sm px-5 pb-5 group-hover:block group-hover:absolute bg-primary-500 text-primary-600 h-fit mt-[-10px] rounded-b-xl ">
         <div className="flex justify-between text-sm">
           <p>Rating</p>
           <div className="flex gap-2 ml-[30%]">

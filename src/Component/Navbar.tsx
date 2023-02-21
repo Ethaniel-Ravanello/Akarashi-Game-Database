@@ -10,7 +10,7 @@ const Navbar = (props: Props) => {
         A K A R A S H I
       </h1>
       <div className="mx-auto my-auto">
-        <div className="relative">
+        <div className="relative ml-5">
           <div className="absolute top-3 left-4 ">
             <AiOutlineSearch size={18} className="text-primary-400" />
           </div>
