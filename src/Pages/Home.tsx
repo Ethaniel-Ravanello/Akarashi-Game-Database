@@ -1,21 +1,22 @@
 import React, { useEffect, useState } from "react";
+import Card from "../Component/Card";
 
 type Props = {};
 
 const Home = (props: Props) => {
   const [data, setData] = useState([]);
 
-  //   const getData = async () => {
-  //     const value = await fetch(
-  //       `https://api.rawg.io/api/games?key=3d27cad6bbee4c88bbdbe0f255aad396&page=1`
-  //     );
-  //     const datas = await value.json();
-  //     console.log(datas.results);
-  //   };
+  const getData = async () => {
+    const value = await fetch(
+      `https://api.rawg.io/api/games?key=3d27cad6bbee4c88bbdbe0f255aad396&page=1`
+    );
+    const datas = await value.json();
+    console.log(datas.results);
+  };
 
-  //   useEffect(() => {
-  //     getData();
-  //   }, []);
+  useEffect(() => {
+    getData();
+  }, []);
 
   return (
     <>
@@ -40,10 +41,10 @@ const Home = (props: Props) => {
         </div>
       </div>
       <div className="w-[100%] h-[80vh] mx-auto px-[30px]">
-        <div className="text-primary-400 mt-[20px] text-5xl font-medium">
+        <div className="text-primary-400 mt-[20px] text-5xl font-medium mb-5">
           Popular Games
         </div>
-        <p>Cardssdsadasd</p>
+        <Card />
       </div>
     </>
   );
