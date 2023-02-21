@@ -23,7 +23,7 @@ const Card = (props: Props) => {
           </div>
         </div>
 
-        <p className="text-2xl font-bold">Grant Thef Auto V</p>
+        <p className="text-3xl font-bold">Grant Thef Auto V</p>
       </div>
       <div className="hidden text-sm px-5 pb-5 group-hover:block group-hover:absolute bg-primary-500 text-primary-600 w-full h-fit mt-[-10px] rounded-b-xl ">
         <div className="flex justify-between text-sm">

@@ -23,11 +23,11 @@ const Home = (props: Props) => {
       <div className="max-w-[1920px] h-[80vh] mx-auto relative">
         <div className="h-full">
           <img
-            className="h-full mx-auto rounded-lg inset-0 aboslute object-cover object-top bg-opacity-10"
+            className="h-full mx-auto rounded-lg inset-0 aboslute object-cover object-top bg-opacity-90"
             src="./Banner.jpg"
             alt=""
           />
-          <div className=" w-full h-full inset-0 absolute bg-primary-100 bg-opacity-75"></div>
+          <div className=" w-full h-full inset-0 absolute bg-primary-100 bg-opacity-80"></div>
         </div>
 
         <div className="absolute mt-[200px] inset-0 text-center">
