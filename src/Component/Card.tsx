@@ -6,11 +6,11 @@ type Props = {};
 
 const Card = (props: Props) => {
   return (
-    <div className="bg-primary-500 group mx-auto text-primary-400 mb-5 w-fit max-w-[420px] rounded-xl h-fit hover:transition hover:ease-in-out  hover:-translate-y-1 hover:scale-110 duration-300">
+    <div className="bg-primary-500 lg:group mx-auto text-primary-400 mb-5 w-fit max-w-[420px] rounded-xl h-fit lg:hover:transition lg:hover:ease-in-out  lg:hover:-translate-y-1 lg:hover:scale-110 duration-300">
       <div className="mb-5">
         <img src="./Testing.jpg" className="rounded-t-xl image-full" alt="" />
       </div>
-      <div className="pb-10 px-5">
+      <div className="pb-5 px-5">
         <div className="flex justify-between">
           <div className="flex gap-3 pt-3.5">
             <FaPlaystation size={20} className="mb-5 align-middle my-auto" />
@@ -26,7 +26,11 @@ const Card = (props: Props) => {
         <p className="text-3xl font-bold cursor-pointer hover:text-primary-300">
           Grant Thef Auto V
         </p>
+        <div className="w-fit h-fit bg-primary-300 text-primary-400 rounded-lg p-2 mt-5">
+          <span>4.7</span>
+        </div>
       </div>
+
       <div className="hidden text-sm px-5 pb-5 group-hover:block group-hover:absolute bg-primary-500 text-primary-600 w-full h-fit mt-[-10px] rounded-b-xl ">
         <div className="flex justify-between text-sm">
           <p>Rating</p>
