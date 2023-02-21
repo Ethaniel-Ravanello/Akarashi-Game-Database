@@ -1,5 +1,5 @@
 import React from "react";
-import { AiFillLinkedin, AiFillGithub } from "react-icons/ai";
+import { AiFillLinkedin, AiFillGithub, AiOutlineSearch } from "react-icons/ai";
 
 type Props = {};
 
@@ -10,11 +10,16 @@ const Navbar = (props: Props) => {
         A K A R A S H I
       </h1>
       <div className="mx-auto my-auto">
-        <input
-          type="text"
-          className=" w-auto max-w-[300px] h-[40px]  bg-third rounded-xl text-white pl-4 justify-center"
-          placeholder="Search A Game"
-        />
+        <div className="relative">
+          <div className="absolute top-3 left-4 ">
+            <AiOutlineSearch size={18} className="text-primary-400" />
+          </div>
+          <input
+            type="text"
+            className="w-[50vw] max-w-[600px] h-[40px] bg-primary-200 text-primary-400 rounded-xl pl-10 justify-center"
+            placeholder="Search A Game"
+          />
+        </div>
       </div>
       <div className="lg:flex justify-evenly my-auto hidden">
         <a
