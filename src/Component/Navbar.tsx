@@ -26,7 +26,7 @@ const Navbar = (props: Props) => {
         />
         {/* Side Nav */}
         <div className="bg-primary-100/80 fixed w-full h-screen z-20 inset-0"></div>
-        <div className="bg-primary-200 text-primary-400 pl-10  fixed inset-0 z-50 h-screen w-[300px] duration-300 overflow-y-scroll">
+        <div className="bg-primary-200 text-primary-400 pl-10  fixed inset-0 z-50 h-screen w-[300px] duration-300 overflow-y-scroll scrollbar-thin scrollbar-thumb-primary-400">
           <AiOutlineClose
             size={30}
             className="text-primary-400 absolute top-4 font-bold right-4"
