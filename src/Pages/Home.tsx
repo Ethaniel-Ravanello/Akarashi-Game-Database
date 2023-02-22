@@ -21,7 +21,7 @@ const Home = (props: Props) => {
   return (
     <>
       <div></div>
-      <div className="max-w-[1920px] h-fit mx-auto relative">
+      <div className="max-w-[1920px] h-[80vh] mx-auto relative">
         <div className=" h-full rounded-xl">
           <img
             className="h-full w-full mx-auto rounded-xl inset-0 aboslute object-cover object-top bg-opacity-90"

@@ -31,7 +31,7 @@ const Card = (props: Props) => {
         </div>
       </div>
 
-      <div className="hidden w-[315px] md:w-[400px] text-sm px-5 pb-5 group-hover:block group-hover:absolute bg-primary-500 text-primary-600 h-fit mt-[-10px] rounded-b-xl ">
+      <div className="hidden w-[315px] md:w-[400px] text-sm px-5 pb-5 lg:group-hover:block lg:group-hover:absolute bg-primary-500 text-primary-600 h-fit mt-[-10px] rounded-b-xl ">
         <div className="flex justify-between text-sm">
           <p>Rating</p>
           <div className="flex gap-2 ml-[30%]">
