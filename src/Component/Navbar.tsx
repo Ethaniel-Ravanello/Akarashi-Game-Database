@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 import {
   AiFillLinkedin,
   AiFillGithub,
@@ -17,19 +19,33 @@ import { IoGameController, IoCodeSlashSharp } from "react-icons/io5";
 type Props = {};
 
 const Navbar = (props: Props) => {
+  const [nav, setNav] = useState(false);
+
   return (
     <div className="max-w-[1920] px-[30px] mx-auto h-[100px] bg-primary-100 grid grid-cols-3">
       <div className="flex">
         <RxHamburgerMenu
+          onClick={() => setNav(!nav)}
           size={30}
-          className="text-primary-400 w-fit h-fit pt-9 md:mr-10"
+          className="text-primary-400 w-fit h-fit pt-9 md:mr-10 cursor-pointer"
         />
         {/* Side Nav */}
-        <div className="bg-primary-100/80 fixed w-full h-screen z-20 inset-0"></div>
-        <div className="bg-primary-200 text-primary-400 pl-10  fixed inset-0 z-50 h-screen w-[300px] duration-300 overflow-y-scroll scrollbar-thin scrollbar-thumb-primary-400">
+        <div
+          className={
+            nav ? "bg-primary-100/80 fixed w-full h-screen z-20 inset-0" : ""
+          }
+        ></div>
+        <div
+          className={
+            nav
+              ? "bg-primary-200 text-primary-400 pl-10  fixed inset-0 z-50 h-screen w-[300px] duration-300 overflow-y-scroll scrollbar-thin scrollbar-thumb-primary-400"
+              : "bg-primary-200 text-primary-400 pl-10  fixed left-[-300px] z-50 h-screen w-[300px] duration-300 overflow-y-scroll scrollbar-thin scrollbar-thumb-primary-400"
+          }
+        >
           <AiOutlineClose
+            onClick={() => setNav(!nav)}
             size={30}
-            className="text-primary-400 absolute top-4 font-bold right-4"
+            className="text-primary-400 absolute top-4 font-bold right-4 cursor-pointer"
           />
           <h2 className="mt-4 font-semibold text-2xl">AKARASHI</h2>
           <aside className="">
