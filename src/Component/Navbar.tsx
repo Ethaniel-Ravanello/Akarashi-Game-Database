@@ -1,14 +1,20 @@
-import React from "react";
 import { AiFillLinkedin, AiFillGithub, AiOutlineSearch } from "react-icons/ai";
+import { RxHamburgerMenu } from "react-icons/rx";
 
 type Props = {};
 
 const Navbar = (props: Props) => {
   return (
     <div className="max-w-[1920] px-[30px] mx-auto h-[100px] bg-primary-100 grid grid-cols-3">
-      <h1 className="text-xl lg:text-3xl align-middle my-auto w-fit h-fit py-4 text-primary-400 font-bold">
-        A K A R A S H I
-      </h1>
+      <div className="flex">
+        <RxHamburgerMenu
+          size={30}
+          className="text-primary-400 w-fit h-fit pt-9 mr-10"
+        />
+        <h1 className="text-xl lg:text-3xl align-middle my-auto w-fit h-fit py-4 text-primary-400 font-bold">
+          A K A R A S H I
+        </h1>
+      </div>
       <div className="mx-auto my-auto">
         <div className="relative ml-5">
           <div className="absolute top-3 left-4 ">
