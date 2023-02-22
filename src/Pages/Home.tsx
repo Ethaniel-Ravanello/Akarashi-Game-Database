@@ -44,7 +44,7 @@ const Home = (props: Props) => {
         <div className="text-primary-400 mt-[20px] text-4xl font-bold mb-8">
           Popular Games
         </div>
-        <div className="grid mx-auto grid-cols-1 md:grid-cols-2 2xl:grid-cols-4">
+        <div className="grid mx-auto grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 3xl:grid-cols-5">
           <Card />
           <Card />
           <Card />
