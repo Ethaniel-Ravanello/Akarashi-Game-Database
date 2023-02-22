@@ -18,11 +18,12 @@ const Navbar = (props: Props) => {
         />
         {/* Side Nav */}
         <div className="bg-primary-100/80 fixed w-full h-screen z-20 inset-0"></div>
-        <div className="bg-primary-200 fixed inset-0 z-50 h-screen w-[350px] duration-300">
+        <div className="bg-primary-200 text-primary-400 fixed inset-0 z-50 h-screen w-[350px] duration-300">
           <AiOutlineClose
             size={30}
             className="text-primary-400 absolute top-4 font-bold right-4"
           />
+          <h2 className="mt-4 ml-5 font-semibold text-2xl">AKARASHI</h2>
         </div>
         {/* Side Nav */}
         <h1 className="text-xl hidden md:flex lg:text-3xl align-middle my-auto w-fit h-fit py-4 text-primary-400 font-bold">
