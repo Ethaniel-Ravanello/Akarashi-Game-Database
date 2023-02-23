@@ -6,21 +6,22 @@ type Props = {};
 const Home = (props: Props) => {
   const [data, setData] = useState([]);
 
-  // const getData = async () => {
-  //   const value = await fetch(
-  //     `https://api.rawg.io/api/games?key=3d27cad6bbee4c88bbdbe0f255aad396&page=1`
-  //   );
-  //   const datas = await value.json();
-  //   console.log(datas.results);
-  // };
+  const getData = async () => {
+    const value = await fetch(
+      `https://api.rawg.io/api/games?key=3d27cad6bbee4c88bbdbe0f255aad396&page=1`
+    );
+    const datas = await value.json();
+    setData(datas.results);
+  };
 
-  // useEffect(() => {
-  //   getData();
-  // }, []);
+  useEffect(() => {
+    getData();
+  }, []);
+
+  console.log(data);
 
   return (
-    <>
-      <div></div>
+    <div>
       <div className="max-w-[1920px] h-[80vh] mx-auto relative">
         <div className=" h-full rounded-xl">
           <img
@@ -45,17 +46,23 @@ const Home = (props: Props) => {
         <div className="text-primary-400 mt-[20px] text-4xl font-bold mb-8">
           Popular Games
         </div>
-        <div className="grid mx-auto grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 3xl:grid-cols-5">
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
+        <div className="grid grid-cols-4 w-full ">
+          {data.map((data: any) => (
+            <Card
+              id={data.id}
+              name={data.name}
+              image={data.background_image}
+              metas={data.metacritic}
+              rating={data.rating}
+              platform={data.parent_platforms}
+              genre={data.genres}
+              esrb={data.esrb_rating}
+              realese={data.realesed}
+            />
+          ))}
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
