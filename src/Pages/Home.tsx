@@ -1,17 +1,23 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
+import type { Data } from "../Utils/data";
+
 import Card from "../Component/Card";
+import Spinner from "../Component/Spinner";
 
 type Props = {};
 
 const Home = (props: Props) => {
   const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   const getData = async () => {
     const value = await fetch(
       `https://api.rawg.io/api/games?key=3d27cad6bbee4c88bbdbe0f255aad396&page=1`
     );
+    setLoading(true);
     const datas = await value.json();
     setData(datas.results);
+    setLoading(false);
   };
 
   useEffect(() => {
@@ -25,7 +31,7 @@ const Home = (props: Props) => {
       <div className="max-w-[1920px] h-[80vh] mx-auto relative">
         <div className=" h-full rounded-xl">
           <img
-            className="h-full w-full mx-auto rounded-xl inset-0 aboslute object-cover object-top bg-opacity-90"
+            className="h-full w-[1920px] mx-auto rounded-xl inset-0 aboslute object-cover object-top bg-opacity-90"
             src="./Banner.jpg"
             alt=""
           />
@@ -46,20 +52,25 @@ const Home = (props: Props) => {
         <div className="text-primary-400 mt-[20px] text-4xl font-bold mb-8">
           Popular Games
         </div>
-        <div className="grid grid-cols-4 w-full ">
-          {data.map((data: any) => (
-            <Card
-              id={data.id}
-              name={data.name}
-              image={data.background_image}
-              metas={data.metacritic}
-              rating={data.rating}
-              platform={data.parent_platforms}
-              genre={data.genres}
-              esrb={data.esrb_rating}
-              realese={data.realesed}
-            />
-          ))}
+
+        <div className="flex justify-around flex-wrap gap-1 mx-auto ">
+          {data && loading === false ? (
+            data.map((data: Data) => (
+              <Card
+                id={data.id}
+                name={data.name}
+                image={data.background_image}
+                metas={data.metacritic}
+                rating={data.rating}
+                platform={data.parent_platforms}
+                genre={data.genres}
+                esrb={data.esrb_rating}
+                realese={data.released}
+              />
+            ))
+          ) : (
+            <Spinner />
+          )}
         </div>
       </div>
     </div>

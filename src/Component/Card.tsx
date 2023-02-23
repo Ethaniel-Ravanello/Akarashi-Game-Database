@@ -2,7 +2,17 @@ import React from "react";
 import { FaPlaystation, FaXbox } from "react-icons/fa";
 import { RiComputerLine } from "react-icons/ri";
 
-type Props = {};
+type Props = {
+  id: number;
+  name: string;
+  image: string;
+  metas: number;
+  rating: number;
+  platform: Array<Object>;
+  genre: Array<Object>;
+  esrb: any;
+  realese: string;
+};
 
 const Card = ({
   id,
@@ -14,15 +24,16 @@ const Card = ({
   genre,
   esrb,
   realese,
-}) => {
+}: Props) => {
+  let ratings = esrb.name;
   return (
     <>
       <div
         key={id}
-        className="bg-primary-500 group text-primary-400 mb-5 w-[300px] md:w-[400px] rounded-xl h-fit lg:hover:transition lg:hover:ease-in-out  lg:hover:-translate-y-1 lg:hover:scale-110 duration-300"
+        className="bg-primary-500 mx-auto group text-primary-400 mb-5 w-[300px] md:w-[400px] rounded-xl h-fit lg:hover:transition lg:hover:ease-in-out  lg:hover:-translate-y-1 lg:hover:scale-110 duration-300"
       >
         <div className="mb-5">
-          <img src={image} className="rounded-t-xl w-full h-full" alt="" />
+          <img src={image} className="rounded-t-xl" alt="" />
         </div>
         <div className="pb-5 px-5">
           <div className="flex justify-between">
@@ -48,34 +59,31 @@ const Card = ({
           <div className="flex justify-between text-sm">
             <p>Rating</p>
             <div className="flex gap-2 ml-[30%]">
-              {Object.values(esrb["name"]).map((index: any) => {
-                return (
-                  <>
-                    <p key={id} className="text-primary-400">
-                      {index}
-                    </p>
-                  </>
-                );
-              })}
+              <p key={id} className="text-primary-400 underline">
+                {ratings}
+              </p>
             </div>
           </div>
           <div className="h-[1px] w-full bg-primary-600 my-2"></div>
           <div className="flex justify-between">
             <p>Genres</p>
-            {/* <div className="flex gap-2">
-              <p className="text-primary-400">{data.genres}</p>
-            </div> */}
+            <div className="flex gap-2">
+              {genre.map((data) => (
+                <>
+                  <p className="text-primary-400 underline">{data.name}</p>
+                </>
+              ))}
+            </div>
           </div>
           <div className="h-[1px] w-full bg-primary-600 my-2"></div>
           <div className="flex justify-between">
             <p>Realesd Date</p>
-            {/* <div className="flex gap-2">
-              <p className="text-primary-400">2013-09-17 </p>
-            </div> */}
+            <div className="flex gap-2">
+              <p className="text-primary-400">{realese} </p>
+            </div>
           </div>
         </div>
       </div>
-      ;
     </>
   );
 };
