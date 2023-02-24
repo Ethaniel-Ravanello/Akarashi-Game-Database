@@ -25,7 +25,6 @@ const Card = ({
   esrb,
   realese,
 }: Props) => {
-  let ratings = esrb.name;
   return (
     <>
       <div
@@ -60,7 +59,7 @@ const Card = ({
             <p>Rating</p>
             <div className="flex gap-2 ml-[30%]">
               <p key={id} className="text-primary-400 underline">
-                {ratings}
+                {esrb?.name}
               </p>
             </div>
           </div>

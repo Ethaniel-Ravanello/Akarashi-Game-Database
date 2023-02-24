@@ -1,30 +1,40 @@
 import { useEffect, useState } from "react";
 import type { Data } from "../Utils/data";
+import axios from "axios";
 
 import Card from "../Component/Card";
 import Spinner from "../Component/Spinner";
+
+import { MdKeyboardArrowRight, MdKeyboardArrowLeft } from "react-icons/md";
 
 type Props = {};
 
 const Home = (props: Props) => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [page, setPage] = useState<number>(1);
 
   const getData = async () => {
-    const value = await fetch(
-      `https://api.rawg.io/api/games?key=3d27cad6bbee4c88bbdbe0f255aad396&page=1`
-    );
     setLoading(true);
-    const datas = await value.json();
-    setData(datas.results);
-    setLoading(false);
+    await axios
+      .get(
+        `https://api.rawg.io/api/games?key=3d27cad6bbee4c88bbdbe0f255aad396&page=${page}`
+      )
+      .then((res) => {
+        setData(res.data.results);
+        console.log(res.data.results);
+        setLoading(false);
+      });
   };
-
   useEffect(() => {
+    setPage(page + 1);
     getData();
   }, []);
 
-  console.log(data);
+  function plusPage() {
+    setPage(page + 1);
+    getData();
+  }
 
   return (
     <div>
@@ -53,7 +63,7 @@ const Home = (props: Props) => {
           Popular Games
         </div>
 
-        <div className="flex justify-around flex-wrap gap-1 mx-auto ">
+        <div className="flex justify-around flex-wrap gap-1 mx-auto mb-5 ">
           {data && loading === false ? (
             data.map((data: Data) => (
               <Card
@@ -71,6 +81,20 @@ const Home = (props: Props) => {
           ) : (
             <Spinner />
           )}
+        </div>
+        <div className=" flex w-fit h-fit mx-auto mt-10 mb-10">
+          <MdKeyboardArrowLeft
+            className="bg-primary-300 active:bg-primary-200 w-fit h-fit mr-5 text-primary-400 rounded-xl cursor-pointer"
+            size={50}
+          />
+          <p className="text-primary-400 font-bold text-xl pt-[11px]">
+            {page - 1}
+          </p>
+          <MdKeyboardArrowRight
+            onClick={plusPage}
+            className="bg-primary-300 active:bg-primary-200 w-fit h-fit ml-5 text-primary-400 rounded-xl cursor-pointer"
+            size={50}
+          />
         </div>
       </div>
     </div>
