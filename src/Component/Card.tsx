@@ -9,7 +9,7 @@ type Props = {
   metas: number;
   rating: number;
   platform: Array<Object>;
-  genre: Array<Object>;
+  genre: any;
   esrb: any;
   realese: string;
 };
@@ -67,7 +67,7 @@ const Card = ({
           <div className="flex justify-between">
             <p>Genres</p>
             <div className="flex gap-2">
-              {genre.map((data) => (
+              {genre.map((data: any) => (
                 <>
                   <p key={id} className="text-primary-400 underline">
                     {data.name}
