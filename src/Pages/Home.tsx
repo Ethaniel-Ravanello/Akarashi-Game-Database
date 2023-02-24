@@ -9,7 +9,7 @@ import { MdKeyboardArrowRight, MdKeyboardArrowLeft } from "react-icons/md";
 
 type Props = {};
 
-const Home = (props: Props) => {
+const Home = () => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);
   const [page, setPage] = useState<number>(1);
