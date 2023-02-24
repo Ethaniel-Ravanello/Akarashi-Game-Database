@@ -4,6 +4,7 @@ import Navbar from "./Component/Navbar";
 import "./App.css";
 
 const Home = lazy(() => import("./Pages/Home"));
+const Browse = lazy(() => import("./Pages/Browse"));
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/browse" element={<Browse />} />
       </Routes>
     </BrowserRouter>
   );
