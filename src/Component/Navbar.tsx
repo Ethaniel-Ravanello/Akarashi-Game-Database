@@ -202,12 +202,12 @@ const Navbar = (props: Props) => {
       </div>
       <div className="my-auto ml-[-55px] md:ml-0">
         <div className="relative ml-5">
-          <div className="absolute top-3 left-4 ">
-            <AiOutlineSearch size={18} className="text-primary-400" />
+          <div className="absolute top-4 left-4 ">
+            <AiOutlineSearch size={20} className="text-primary-400" />
           </div>
           <input
             type="text"
-            className="w-[230px] md:w-[350px] lg:w-[400px] xl:w-[500px] 2xl:w-[700px] h-[40px] bg-primary-200 text-primary-400 rounded-xl pl-10 justify-center"
+            className="w-[230px] md:w-[350px] lg:w-[400px] xl:w-[500px] 2xl:w-[700px] h-[50px] bg-primary-200 text-primary-400 rounded-xl pl-10 justify-center"
             placeholder="Search A Game"
           />
         </div>

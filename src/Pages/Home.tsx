@@ -13,12 +13,13 @@ const Home = () => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);
   const [page, setPage] = useState<number>(1);
+  const [search, setSearch] = useState("");
 
   const getData = (pageNum: number) => {
     setLoading(true);
     axios
       .get(
-        `https://api.rawg.io/api/games?key=3d27cad6bbee4c88bbdbe0f255aad396&page=${pageNum}`
+        `https://api.rawg.io/api/games?key=3d27cad6bbee4c88bbdbe0f255aad396&page=${pageNum}&search=${search}`
       )
       .then((res) => {
         setData(res.data.results);
