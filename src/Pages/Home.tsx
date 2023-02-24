@@ -14,7 +14,7 @@ const Home = () => {
   const [loading, setLoading] = useState(false);
   const [page, setPage] = useState<number>(1);
 
-  const getData = (pageNum) => {
+  const getData = (pageNum: number) => {
     setLoading(true);
     axios
       .get(
