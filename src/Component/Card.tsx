@@ -69,7 +69,9 @@ const Card = ({
             <div className="flex gap-2">
               {genre.map((data) => (
                 <>
-                  <p className="text-primary-400 underline">{data.name}</p>
+                  <p key={id} className="text-primary-400 underline">
+                    {data.name}
+                  </p>
                 </>
               ))}
             </div>

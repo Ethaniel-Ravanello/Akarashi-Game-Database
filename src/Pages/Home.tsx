@@ -14,11 +14,11 @@ const Home = () => {
   const [loading, setLoading] = useState(false);
   const [page, setPage] = useState<number>(1);
 
-  const getData = async () => {
+  const getData = (pageNum) => {
     setLoading(true);
-    await axios
+    axios
       .get(
-        `https://api.rawg.io/api/games?key=3d27cad6bbee4c88bbdbe0f255aad396&page=${page}`
+        `https://api.rawg.io/api/games?key=3d27cad6bbee4c88bbdbe0f255aad396&page=${pageNum}`
       )
       .then((res) => {
         setData(res.data.results);
@@ -27,13 +27,11 @@ const Home = () => {
       });
   };
   useEffect(() => {
-    setPage(page + 1);
-    getData();
+    getData(page);
   }, []);
 
-  function plusPage() {
-    setPage(page + 1);
-    getData();
+  function goToTop() {
+    window.scrollTo({ top: 500, behavior: "smooth" });
   }
 
   return (
@@ -67,6 +65,7 @@ const Home = () => {
           {data && loading === false ? (
             data.map((data: Data) => (
               <Card
+                key={data.id}
                 id={data.id}
                 name={data.name}
                 image={data.background_image}
@@ -82,16 +81,23 @@ const Home = () => {
             <Spinner />
           )}
         </div>
-        <div className=" flex w-fit h-fit mx-auto mt-10 mb-10">
+        <div className=" flex w-fit h-[200px] mx-auto mt-20 pt-10 mb-10">
           <MdKeyboardArrowLeft
+            onClick={() => {
+              setPage(page - 1);
+              getData(page - 1);
+              goToTop();
+            }}
             className="bg-primary-300 active:bg-primary-200 w-fit h-fit mr-5 text-primary-400 rounded-xl cursor-pointer"
             size={50}
           />
-          <p className="text-primary-400 font-bold text-xl pt-[11px]">
-            {page - 1}
-          </p>
+          <p className="text-primary-400 font-bold text-xl pt-[11px]">{page}</p>
           <MdKeyboardArrowRight
-            onClick={plusPage}
+            onClick={() => {
+              setPage(page + 1);
+              getData(page + 1);
+              goToTop();
+            }}
             className="bg-primary-300 active:bg-primary-200 w-fit h-fit ml-5 text-primary-400 rounded-xl cursor-pointer"
             size={50}
           />
