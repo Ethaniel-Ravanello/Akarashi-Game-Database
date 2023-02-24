@@ -31,7 +31,7 @@ const Home = () => {
   }, []);
 
   function goToTop() {
-    window.scrollTo({ top: 500, behavior: "smooth" });
+    window.scrollTo({ top: 400, behavior: "smooth" });
   }
 
   return (
