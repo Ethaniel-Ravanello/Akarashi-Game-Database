@@ -92,7 +92,6 @@ const Home = () => {
           <p className="text-primary-400 font-bold text-xl pt-[11px]">{page}</p>
           <MdKeyboardArrowRight
             onClick={() => {
-              setPage(page + 1);
               getData(page + 1);
               goToTop();
             }}
