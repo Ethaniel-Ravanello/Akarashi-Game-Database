@@ -29,7 +29,7 @@ const Home = () => {
   }, []);
 
   function goToTop() {
-    window.scrollTo({ top: 501, behavior: "smooth" });
+    window.scrollTo({ top: 701, behavior: "smooth" });
   }
 
   return (
