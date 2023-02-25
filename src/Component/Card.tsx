@@ -1,6 +1,10 @@
 import React from "react";
 import { FaPlaystation, FaXbox } from "react-icons/fa";
+import { SiNintendoswitch } from "react-icons/si";
 import { RiComputerLine } from "react-icons/ri";
+import { AiFillApple, AiFillAndroid, AiFillChrome } from "react-icons/ai";
+import { FaAppStoreIos } from "react-icons/fa";
+import { DiLinux } from "react-icons/di";
 
 type Props = {
   id: number;
@@ -8,7 +12,7 @@ type Props = {
   image: string;
   metas: number;
   rating: number;
-  platform: Array<Object>;
+  platform: any;
   genre: any;
   esrb: any;
   realese: string;
@@ -37,12 +41,64 @@ const Card = ({
         <div className="pb-5 px-5">
           <div className="flex justify-between">
             <div className="flex gap-3 pt-3.5">
-              <FaPlaystation size={20} className="mb-5 align-middle my-auto" />
-              <FaXbox size={20} className="mb-5" />
-              <RiComputerLine size={20} className="mb-5" />
+              {platform.map((index: any) => (
+                <span>
+                  {index.platform.name == "PC" ? (
+                    <RiComputerLine size={20} className="mb-5" />
+                  ) : index.platform.name === "Xbox" ? (
+                    <FaXbox size={20} className="mb-5" />
+                  ) : index.platform.name === "PlayStation" ? (
+                    <FaPlaystation
+                      size={20}
+                      className="mb-5 align-middle my-auto"
+                    />
+                  ) : index.platform.name === "Apple Macintosh" ? (
+                    <AiFillApple
+                      size={20}
+                      className="mb-5 align-middle my-auto"
+                    />
+                  ) : index.platform.name === "Linux" ? (
+                    <DiLinux size={20} className="mb-5 align-middle my-auto" />
+                  ) : index.platform.name === "Android" ? (
+                    <AiFillAndroid
+                      size={20}
+                      className="mb-5 align-middle my-auto"
+                    />
+                  ) : index.platform.name === "Nintendo" ? (
+                    <SiNintendoswitch
+                      size={20}
+                      className="mb-5 align-middle my-auto"
+                    />
+                  ) : index.platform.name == "iOS" ? (
+                    <FaAppStoreIos
+                      size={20}
+                      className="mb-5 align-middle my-auto"
+                    />
+                  ) : index.platform.name == "Web" ? (
+                    <AiFillChrome
+                      size={23}
+                      className="mb-5 align-middle my-auto text-primary-400"
+                    />
+                  ) : (
+                    "Others"
+                  )}
+                </span>
+              ))}
             </div>
             <div className="bg-primary-300 h-fit p-3 rounded-lg">
-              <span className="font-bold">{metas}</span>
+              <span
+                className={`font-bold ${
+                  metas < 75 && metas > 50
+                    ? "text-primary-700"
+                    : metas > 75
+                    ? "text-primary-800"
+                    : metas < 50
+                    ? "text-primary-900"
+                    : ""
+                }`}
+              >
+                {metas}
+              </span>
             </div>
           </div>
 
