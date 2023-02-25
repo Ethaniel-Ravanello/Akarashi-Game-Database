@@ -11,7 +11,6 @@ const Home = () => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);
   const [page, setPage] = useState(1);
-  const [search, setSearch] = useState("");
 
   const getData = (pageNum: number) => {
     setLoading(true);
