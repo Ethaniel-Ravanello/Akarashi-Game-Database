@@ -17,8 +17,6 @@ const Navbar = (props: Props) => {
 
   const handleKeyDown = (event) => {
     if (event.key === "Enter") {
-      // 👇 Get input value
-      getData(1);
     }
   };
 
