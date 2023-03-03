@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import type { Data } from "../Utils/data";
+import { useSelector } from "react-redux";
 import axios from "axios";
 
 import Card from "../Component/Card";
@@ -12,11 +13,13 @@ const Home = () => {
   const [loading, setLoading] = useState(false);
   const [page, setPage] = useState(1);
 
+  const filter = useSelector((state) => state.gameFilter.filter);
+
   const getData = (pageNum: number) => {
     setLoading(true);
     axios
       .get(
-        `https://api.rawg.io/api/games?key=3d27cad6bbee4c88bbdbe0f255aad396&page=${pageNum}`
+        `https://api.rawg.io/api/games?key=3d27cad6bbee4c88bbdbe0f255aad396&page=${pageNum}&search=${filter}`
       )
       .then((res) => {
         setData(res.data.results);

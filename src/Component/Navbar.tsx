@@ -4,11 +4,16 @@ import SideNav from "./SideNav";
 
 import { AiFillLinkedin, AiFillGithub, AiOutlineSearch } from "react-icons/ai";
 import { RxHamburgerMenu } from "react-icons/rx";
+import { useDispatch, useSelector } from "react-redux";
+import { setFilter } from "../features/searchSlice";
 
 type Props = {};
 
 const Navbar = (props: Props) => {
   const [nav, setNav] = useState<boolean>(false);
+
+  const filter = useSelector((state) => state.gameFilter.filter);
+  const dispatch = useDispatch();
 
   return (
     <div className="max-w-[1920] px-[30px] mx-auto h-[100px] bg-primary-100 grid grid-cols-3">
@@ -31,6 +36,8 @@ const Navbar = (props: Props) => {
             <AiOutlineSearch size={20} className="text-primary-400" />
           </div>
           <input
+            onChange={(e) => dispatch(setFilter(e.target.value))}
+            value={filter}
             type="text"
             className="w-[230px] md:w-[350px] lg:w-[400px] xl:w-[500px] 2xl:w-[700px] h-[50px] bg-primary-200 text-primary-400 rounded-xl pl-10 justify-center"
             placeholder="Search A Game"
