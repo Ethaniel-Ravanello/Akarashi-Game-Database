@@ -15,6 +15,13 @@ const Navbar = (props: Props) => {
   const filter = useSelector((state) => state.gameFilter.filter);
   const dispatch = useDispatch();
 
+  const handleKeyDown = (event) => {
+    if (event.key === "Enter") {
+      // 👇 Get input value
+      getData(1);
+    }
+  };
+
   return (
     <div className="max-w-[1920] px-[30px] mx-auto h-[100px] bg-primary-100 grid grid-cols-3">
       <div className="flex">
