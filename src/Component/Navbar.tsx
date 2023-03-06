@@ -6,6 +6,7 @@ import { AiFillLinkedin, AiFillGithub, AiOutlineSearch } from "react-icons/ai";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { useDispatch, useSelector } from "react-redux";
 import { setFilter } from "../features/searchSlice";
+import { toggleRefetch } from "../features/refetchSlice";
 import { PayloadAction } from "@reduxjs/toolkit";
 
 type Props = {
@@ -18,6 +19,7 @@ const Navbar = () => {
   const [nav, setNav] = useState<boolean>(false);
 
   const filter = useSelector((state: Props) => state.gameFilter.filter);
+  const fetching = useSelector((state) => state.gameFetch.refetch);
   const dispatch = useDispatch();
 
   const handleKeyDown = (event: any) => {
@@ -40,6 +42,7 @@ const Navbar = () => {
           A K A R A S H I
         </h1>
       </div>
+
       <div className="my-auto ml-[-55px] md:ml-0">
         <div className="relative ml-5">
           <div className="absolute top-4 left-4 ">
@@ -49,11 +52,18 @@ const Navbar = () => {
             onChange={(e) => dispatch(setFilter(e.target.value))}
             value={filter}
             type="text"
-            className="w-[230px] md:w-[350px] lg:w-[400px] xl:w-[500px] 2xl:w-[700px] h-[50px] bg-primary-200 text-primary-400 rounded-xl pl-10 justify-center"
+            className="w-[230px] md:w-[350px] lg:w-[330px] xl:w-[500px] 2xl:w-[700px] h-[50px] bg-primary-200 text-primary-400 rounded-xl pl-10 justify-center"
             placeholder="Search A Game"
           />
         </div>
+        <button
+          onClick={() => dispatch(toggleRefetch(!fetching))}
+          className="bg-primary-400"
+        >
+          Search
+        </button>
       </div>
+
       <div className="lg:flex justify-evenly my-auto hidden">
         <a
           href="https://www.linkedin.com/in/ethaniel-ravanello-a60810251/"
