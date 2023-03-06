@@ -6,16 +6,21 @@ import { AiFillLinkedin, AiFillGithub, AiOutlineSearch } from "react-icons/ai";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { useDispatch, useSelector } from "react-redux";
 import { setFilter } from "../features/searchSlice";
+import { PayloadAction } from "@reduxjs/toolkit";
 
-type Props = {};
+type Props = {
+  state: PayloadAction;
+  gameFilter: string;
+  filter: string;
+};
 
-const Navbar = (props: Props) => {
+const Navbar = () => {
   const [nav, setNav] = useState<boolean>(false);
 
-  const filter = useSelector((state) => state.gameFilter.filter);
+  const filter = useSelector((state: Props) => state.gameFilter.filter);
   const dispatch = useDispatch();
 
-  const handleKeyDown = (event) => {
+  const handleKeyDown = (event: any) => {
     if (event.key === "Enter") {
     }
   };

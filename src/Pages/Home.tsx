@@ -14,7 +14,7 @@ const Home = () => {
   const [page, setPage] = useState(1);
 
   const filter = useSelector((state) => state.gameFilter.filter);
-
+  console.log(filter);
   const getData = (pageNum: number) => {
     setLoading(true);
     axios
