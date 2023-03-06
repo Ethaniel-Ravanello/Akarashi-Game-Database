@@ -44,7 +44,7 @@ const Home = () => {
       <div className="max-w-[1920px] h-[80vh] mx-auto relative">
         <div className=" h-full rounded-xl">
           <img
-            className="h-full w-[1920px] mx-auto rounded-xl inset-0 aboslute object-cover object-top bg-opacity-90"
+            className="h-full w-[100vw] mx-auto rounded-xl inset-0 aboslute object-cover object-top bg-opacity-90"
             src="./Banner.jpg"
             alt=""
           />
