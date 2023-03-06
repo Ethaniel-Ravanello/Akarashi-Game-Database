@@ -13,8 +13,8 @@ const Home = () => {
   const [loading, setLoading] = useState(false);
   const [page, setPage] = useState(1);
 
-  const filter = useSelector((state) => state.gameFilter.filter);
-  const fetching = useSelector((state) => state.gameFetch.refetch);
+  const filter = useSelector((state: any) => state.gameFilter.filter);
+  const fetching = useSelector((state: any) => state.gameRefetch.refetch);
   console.log(filter);
   const getData = (pageNum: number) => {
     setLoading(true);
@@ -25,12 +25,15 @@ const Home = () => {
       .then((res) => {
         setData(res.data.results);
         console.log(res.data.results);
+        console.log(res.data);
         setLoading(false);
       });
   };
   useEffect(() => {
     getData(page);
-  }, []);
+    setPage(1);
+    getData(1);
+  }, [fetching]);
 
   function goToTop() {
     window.scrollTo({ top: 700, behavior: "smooth" });

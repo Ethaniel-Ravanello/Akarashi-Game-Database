@@ -41,7 +41,7 @@ const Card = ({
         <div className="pb-5 px-5">
           <div className="flex justify-between">
             <div className="flex gap-3 pt-3.5">
-              {platform.map((index: any) => (
+              {platform?.map((index: any) => (
                 <span>
                   {index.platform.name == "PC" ? (
                     <RiComputerLine size={20} className="mb-5" />

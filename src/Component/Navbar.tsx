@@ -12,18 +12,19 @@ import { PayloadAction } from "@reduxjs/toolkit";
 type Props = {
   state: PayloadAction;
   gameFilter: string;
-  filter: string;
+  gameRefetch: boolean;
 };
 
 const Navbar = () => {
   const [nav, setNav] = useState<boolean>(false);
 
   const filter = useSelector((state: Props) => state.gameFilter.filter);
-  const fetching = useSelector((state) => state.gameFetch.refetch);
+  const fetching = useSelector((state: Props) => state.gameRefetch.refetch);
   const dispatch = useDispatch();
 
   const handleKeyDown = (event: any) => {
     if (event.key === "Enter") {
+      dispatch(toggleRefetch(!fetching));
     }
   };
 
@@ -50,18 +51,13 @@ const Navbar = () => {
           </div>
           <input
             onChange={(e) => dispatch(setFilter(e.target.value))}
+            onKeyUp={handleKeyDown}
             value={filter}
             type="text"
             className="w-[230px] md:w-[350px] lg:w-[330px] xl:w-[500px] 2xl:w-[700px] h-[50px] bg-primary-200 text-primary-400 rounded-xl pl-10 justify-center"
             placeholder="Search A Game"
           />
         </div>
-        <button
-          onClick={() => dispatch(toggleRefetch(!fetching))}
-          className="bg-primary-400"
-        >
-          Search
-        </button>
       </div>
 
       <div className="lg:flex justify-evenly my-auto hidden">
