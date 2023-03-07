@@ -36,7 +36,7 @@ const Card = ({
         className="bg-primary-500 group text-primary-400 mb-5 w-[350px] md:w-[435px] rounded-xl h-fit lg:hover:transition lg:hover:ease-in-out  lg:hover:-translate-y-1 lg:hover:scale-110 duration-300"
       >
         <div className="mb-5">
-          <img src={image} className="rounded-t-xl" alt="" />
+          <img src={image} loading="lazy" className="rounded-t-xl" alt="" />
         </div>
         <div className="pb-5 px-5">
           <div className="flex justify-between">

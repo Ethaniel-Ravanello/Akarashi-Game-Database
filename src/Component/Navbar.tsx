@@ -14,6 +14,8 @@ type Props = {
   state: PayloadAction;
   gameFilter: string;
   gameRefetch: boolean;
+  filter: any;
+  refetch: any;
 };
 
 const Navbar = () => {
