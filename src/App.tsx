@@ -8,15 +8,16 @@ const Browse = lazy(() => import("./Pages/Browse"));
 
 function App() {
   return (
-    <BrowserRouter>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/browse" element={<Browse />} />
-      </Routes>
-    </BrowserRouter>
+    <Suspense fallback={"LOADINGG..."}>
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/browse" element={<Browse />} />
+        </Routes>
+      </BrowserRouter>
+    </Suspense>
   );
 }
 
 export default App;
-

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 import SideNav from "./SideNav";
 
@@ -28,6 +29,8 @@ const Navbar = () => {
     }
   };
 
+  const navigate = useNavigate();
+
   return (
     <div className="max-w-[1920] px-[30px] mx-auto h-[100px] bg-primary-100 grid grid-cols-3">
       <div className="flex">
@@ -39,7 +42,10 @@ const Navbar = () => {
         {/* Side Nav */}
         <SideNav nav={nav} setNav={setNav} />
         {/* Side Nav */}
-        <h1 className="text-xl hidden md:flex lg:text-3xl align-middle my-auto w-fit h-fit py-4 text-primary-400 font-bold">
+        <h1
+          onClick={() => navigate("/")}
+          className="text-xl hidden md:flex lg:text-3xl align-middle my-auto w-fit h-fit py-4 text-primary-400 font-bold"
+        >
           A K A R A S H I
         </h1>
       </div>
