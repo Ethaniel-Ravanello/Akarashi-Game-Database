@@ -89,7 +89,7 @@ const Home = () => {
         <div className=" flex w-fit h-[200px] mx-auto mt-20 pt-10 mb-10">
           <MdKeyboardArrowLeft
             onClick={() => {
-              setPage(page - 1);
+              setPage(page - 2);
               getData(page - 1);
               goToTop();
             }}
