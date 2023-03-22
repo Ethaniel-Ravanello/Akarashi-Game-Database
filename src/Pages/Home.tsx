@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import type { Data } from "../Utils/data";
 import { useSelector } from "react-redux";
+import type { Data } from "../Utils/data";
 import axios from "axios";
 
 import Card from "../Component/Card";
