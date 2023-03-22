@@ -99,7 +99,9 @@ const Home = () => {
             className="bg-primary-300 active:bg-primary-200 w-fit h-fit mr-5 text-primary-400 rounded-xl cursor-pointer"
             size={50}
           />
+
           <p className="text-primary-400 font-bold text-xl pt-[11px]">{page}</p>
+
           <MdKeyboardArrowRight
             onClick={() => {
               setPage(page + 1);
