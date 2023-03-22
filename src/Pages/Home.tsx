@@ -16,6 +16,7 @@ const Home = () => {
   const filter = useSelector((state: any) => state.gameFilter.filter);
   const fetching = useSelector((state: any) => state.gameRefetch.refetch);
   console.log(filter);
+
   const getData = (pageNum: number) => {
     setLoading(true);
     axios
@@ -29,6 +30,7 @@ const Home = () => {
         setLoading(false);
       });
   };
+
   useEffect(() => {
     getData(page);
     setPage(1);
@@ -86,6 +88,7 @@ const Home = () => {
             <Spinner />
           )}
         </div>
+
         <div className=" flex w-fit h-[200px] mx-auto mt-20 pt-10 mb-10">
           <MdKeyboardArrowLeft
             onClick={() => {
