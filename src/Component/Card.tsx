@@ -33,7 +33,7 @@ const Card = ({
     <>
       <div
         key={id}
-        className="bg-primary-500 group text-primary-400 mb-5 w-[350px] md:w-[435px] rounded-xl h-fit lg:hover:transition lg:hover:ease-in-out  lg:hover:-translate-y-1 lg:hover:scale-110 duration-300"
+        className="bg-primary-500 group text-primary-400 mb-5 w-[350px] md:w-[435px] h-fit rounded-xl h-fit lg:hover:transition lg:hover:ease-in-out  lg:hover:-translate-y-1 lg:hover:scale-110 duration-300"
       >
         <div className="mb-5">
           <img src={image} loading="lazy" className="rounded-t-xl" alt="" />
