@@ -46,7 +46,7 @@ const Navbar = () => {
         {/* Side Nav */}
         <h1
           onClick={() => navigate("/")}
-          className="text-xl hidden md:flex lg:text-3xl align-middle my-auto w-fit h-fit py-4 text-primary-400 font-bold"
+          className="text-xl hidden md:flex lg:text-3xl align-middle my-auto w-fit h-fit py-4 text-primary-400 font-bold s"
         >
           A K A R A S H I
         </h1>
