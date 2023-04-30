@@ -15,7 +15,6 @@ const Home = () => {
 
   const filter = useSelector((state: any) => state.gameFilter.filter);
   const fetching = useSelector((state: any) => state.gameRefetch.refetch);
-  console.log(filter);
 
   const getData = (pageNum: number) => {
     setLoading(true);

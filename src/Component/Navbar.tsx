@@ -23,15 +23,15 @@ const Navbar = () => {
 
   const filter = useSelector((state: Props) => state.gameFilter.filter);
   const fetching = useSelector((state: Props) => state.gameRefetch.refetch);
+
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const handleKeyDown = (event: any) => {
     if (event.key === "Enter") {
       dispatch(toggleRefetch(!fetching));
     }
   };
-
-  const navigate = useNavigate();
 
   return (
     <div className="max-w-[1920] px-[30px] mx-auto h-[100px] bg-primary-100 grid grid-cols-3">
