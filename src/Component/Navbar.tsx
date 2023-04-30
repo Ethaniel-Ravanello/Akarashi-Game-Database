@@ -14,8 +14,8 @@ type Props = {
   state: PayloadAction;
   gameFilter: string;
   gameRefetch: boolean;
-  filter: any;
-  refetch: any;
+  filter: string;
+  refetch: boolean;
 };
 
 const Navbar = () => {
@@ -46,7 +46,7 @@ const Navbar = () => {
         {/* Side Nav */}
         <h1
           onClick={() => navigate("/")}
-          className="text-xl hidden md:flex lg:text-3xl align-middle my-auto w-fit h-fit py-4 text-primary-400 font-bold s"
+          className="text-xl hidden md:flex lg:text-3xl align-middle my-auto w-fit h-fit py-4 text-primary-400 font-bold"
         >
           A K A R A S H I
         </h1>

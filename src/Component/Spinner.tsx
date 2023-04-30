@@ -1,8 +1,6 @@
 import React from "react";
 
-type Props = {};
-
-const Spinner = (props: Props) => {
+const Spinner = () => {
   return (
     <div className="w-[100px] h-[100px] mx-auto animate-spin text-primary-400 fill-primary-400 Wede">
       <svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">

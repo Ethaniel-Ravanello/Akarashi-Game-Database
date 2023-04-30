@@ -1,4 +1,4 @@
-import React, { Dispatch, SetStateAction } from "react";
+import { Dispatch, SetStateAction } from "react";
 
 import { AiOutlineClose, AiFillApple, AiFillAndroid } from "react-icons/ai";
 import { BiGame } from "react-icons/bi";
