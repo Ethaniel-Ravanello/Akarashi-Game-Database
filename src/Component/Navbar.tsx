@@ -22,14 +22,13 @@ const Navbar = () => {
   const [nav, setNav] = useState<boolean>(false);
 
   const filter = useSelector((state: Props) => state.gameFilter.filter);
-  const fetching = useSelector((state: Props) => state.gameRefetch.refetch);
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
   const handleKeyDown = (event: any) => {
     if (event.key === "Enter") {
-      dispatch(toggleRefetch(!fetching));
+      dispatch(toggleRefetch());
     }
   };
 
