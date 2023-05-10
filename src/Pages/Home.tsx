@@ -43,7 +43,7 @@ const Home = () => {
   return (
     <div>
       <div className="max-w-[1920px] h-[80vh] mx-auto relative">
-        <div className=" h-full rounded-xl s">
+        <div className=" h-full rounded-xl ss">
           <img
             className="h-full w-[100vw] mx-auto s rounded-xl inset-0 aboslute object-cover object-top bg-opacity-90"
             src="./Banner.jpg"
