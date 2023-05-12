@@ -6,15 +6,16 @@ import SideNav from "./SideNav";
 import { AiFillLinkedin, AiFillGithub, AiOutlineSearch } from "react-icons/ai";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { useDispatch, useSelector } from "react-redux";
-import { setFilter } from "../features/searchSlice";
+import { setFilter, clearFilter } from "../features/searchSlice";
 import { toggleRefetch } from "../features/refetchSlice";
 import { PayloadAction } from "@reduxjs/toolkit";
 
 type Props = {
   state: PayloadAction;
-  gameFilter: string;
+  gameFilter: {
+    filter: string;
+  };
   gameRefetch: boolean;
-  filter: string;
   refetch: boolean;
 };
 
@@ -33,9 +34,10 @@ const Navbar = () => {
 
   const logoClick = () => {
     navigate("/");
+    dispatch(clearFilter());
     dispatch(toggleRefetch());
   };
-
+  console.log(filter);
   return (
     <div className="max-w-[1920] px-[30px] mx-auto h-[100px] bg-primary-100 grid grid-cols-3">
       <div className="flex">
@@ -48,8 +50,8 @@ const Navbar = () => {
         <SideNav nav={nav} setNav={setNav} />
         {/* Side Nav */}
         <h1
-          onClick={() => navigate("/")}
-          className="text-xl hidden md:flex lg:text-3xl align-middle my-auto w-fit h-fit py-4 text-primary-400 font-bold"
+          onClick={logoClick}
+          className="text-xl hidden md:flex lg:text-3xl align-middle my-auto w-fit h-fit py-4 text-primary-400 font-bold cursor-pointer"
         >
           A K A R A S H I
         </h1>
