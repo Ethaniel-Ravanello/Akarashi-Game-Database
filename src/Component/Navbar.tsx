@@ -22,7 +22,6 @@ const Navbar = () => {
   const [nav, setNav] = useState<boolean>(false);
 
   const filter = useSelector((state: Props) => state.gameFilter.filter);
-
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -30,6 +29,11 @@ const Navbar = () => {
     if (event.key === "Enter") {
       dispatch(toggleRefetch());
     }
+  };
+
+  const logoClick = () => {
+    navigate("/");
+    dispatch(toggleRefetch());
   };
 
   return (
