@@ -1,4 +1,5 @@
 import { Dispatch, SetStateAction } from "react";
+import { useNavigate } from "react-router-dom";
 
 import { AiOutlineClose, AiFillApple, AiFillAndroid } from "react-icons/ai";
 import { BiGame } from "react-icons/bi";
@@ -14,6 +15,8 @@ type Props = {
 };
 
 const SideNav = ({ nav, setNav }: Props) => {
+  const navigate = useNavigate();
+
   return (
     <>
       <div
@@ -35,9 +38,21 @@ const SideNav = ({ nav, setNav }: Props) => {
         />
         <h2 className="mt-4 font-semibold text-2xl">AKARASHI</h2>
         <aside className="">
-          <h3 className="w-fit font-bold text-2xl mt-10">Home</h3>
-          <h3 className="w-fit font-bold text-2xl mt-10">All Games</h3>
-          <h4 className="w-fit font-bold text-xl mt-7">Browse</h4>
+          <h3
+            onClick={() => navigate("/")}
+            className="w-fit font-bold text-2xl mt-10 hover:text-primary-600 cursor-pointer"
+          >
+            Home
+          </h3>
+          <h3 className="w-fit font-bold text-2xl mt-10 hover:text-primary-600 cursor-pointer">
+            All Games
+          </h3>
+          <h4
+            onClick={() => navigate("/browse")}
+            className="w-fit font-bold text-xl mt-7 hover:text-primary-600 cursor-pointer"
+          >
+            Browse
+          </h4>
           <ul>
             <li className="text-xl group flex font-medium my-4 cursor-pointer">
               <IoGameController
