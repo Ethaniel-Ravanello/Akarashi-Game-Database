@@ -25,7 +25,6 @@ const Home = () => {
       .then((res) => {
         setData(res.data.results);
         console.log(res.data.results);
-        console.log(res.data);
         setLoading(false);
       });
   };
