@@ -1,5 +1,6 @@
 interface Platform {
   platform: string;
+  image: string;
   popular_items: string;
   game1: string;
   game2: string;
@@ -11,6 +12,8 @@ interface Platform {
 const Platform: Platform[] = [
   {
     platform: "PC",
+    image:
+      "https://images.hdqwalls.com/download/battlefield-4-soldier-to-1280x720.jpg",
     popular_items: "120.456",
     game1: "Counter Strike: Global Offensive",
     game2: "Portal 2",
@@ -21,6 +24,7 @@ const Platform: Platform[] = [
 
   {
     platform: "Playstation",
+    image: "https://wallpaperaccess.com/full/3690445.jpg",
     popular_items: "879",
     game1: "God Of War: Ragnarok",
     game2: "Uncharted 4: The Thieves End",
