@@ -1,14 +1,14 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { setFilter, clearFilter } from "../features/searchSlice";
+import { toggleRefetch } from "../features/refetchSlice";
+import { PayloadAction } from "@reduxjs/toolkit";
 
 import SideNav from "./SideNav";
 
 import { AiFillLinkedin, AiFillGithub, AiOutlineSearch } from "react-icons/ai";
 import { RxHamburgerMenu } from "react-icons/rx";
-import { useDispatch, useSelector } from "react-redux";
-import { setFilter, clearFilter } from "../features/searchSlice";
-import { toggleRefetch } from "../features/refetchSlice";
-import { PayloadAction } from "@reduxjs/toolkit";
 
 type Props = {
   state: PayloadAction;
@@ -37,7 +37,7 @@ const Navbar = () => {
     dispatch(clearFilter());
     dispatch(toggleRefetch());
   };
-  console.log(filter);
+
   return (
     <div className="max-w-[1920] px-[30px] mx-auto h-[100px] bg-primary-100 grid grid-cols-3">
       <div className="flex">
