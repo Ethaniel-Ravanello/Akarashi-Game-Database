@@ -4,7 +4,7 @@ const Browse = () => {
       <h1 className="text-4xl font-bold mt-3">Browse</h1>
 
       <div className="w-full">
-        <img src="https://wallpaperaccess.com/full/3690445.jpg" alt="" />
+        <img src="" alt="" />
       </div>
     </div>
   );
