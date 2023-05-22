@@ -12,8 +12,7 @@ interface Platform {
 const Platform: Platform[] = [
   {
     platform: "PC",
-    image:
-      "https://images.hdqwalls.com/download/battlefield-4-soldier-to-1280x720.jpg",
+    image: "https://wallpapercave.com/wp/wp11318812.jpg",
     popular_items: "120,456",
     game1: "Counter Strike: Global Offensive",
     game2: "Portal 2",
@@ -24,7 +23,7 @@ const Platform: Platform[] = [
 
   {
     platform: "Playstation",
-    image: "https://wallpaperaccess.com/full/3690445.jpg",
+    image: "https://wallpapercave.com/wp/wp9041296.jpg",
     popular_items: "10,567",
     game1: "God Of War: Ragnarok",
     game2: "Uncharted 4: The Thieves End",
@@ -37,16 +36,15 @@ const Platform: Platform[] = [
     image:
       "https://wallpapersmug.com/download/1024x768/cc9656/halo-infinite-2020-soldier.jpg",
     popular_items: "2,209",
-    game1: "God Of War: Ragnarok",
-    game2: "Uncharted 4: The Thieves End",
-    game3: "Spiderman",
-    game4: "Horizon Zero Dawn: Forbidden West",
-    game5: "The Last Of Us",
+    game1: "Halo Infinite",
+    game2: "Forza Horizon 5",
+    game3: "Titanfall 2",
+    game4: "Need For Speed: Payback",
+    game5: "A Way Out",
   },
   {
     platform: "SWITCH",
-    image:
-      "https://1.bp.blogspot.com/-LSmZDfZrN6M/V9Md5aQ1fiI/AAAAAAAAAcM/uRT2AIayhSUEP48GeHVebuEfxJ8aa_tVgCLcB/s1600/the_legend_of_Zelda-horse-sunlight-link-nintendo-wii-u-game-wallpapers.jpg",
+    image: "https://wallpapercave.com/wp/wp11520704.jpg",
     popular_items: "879",
     game1: "The Legend Of Zelda: Tears Of The Kingdom",
     game2: "The Legend Of Zelda: Breath Of The Wild",

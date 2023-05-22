@@ -35,7 +35,7 @@ const Genres: Genres[] = [
   {
     platform: "Adventure",
     image:
-      "https://wallpapersmug.com/download/1024x768/cc9656/halo-infinite-2020-soldier.jpg",
+      "https://images.hdqwalls.com/download/cyberpunk-2077-girl-art-25-1280x720.jpg",
     popular_items: "1,765",
     game1: "The Legend of Zelda: Breath Of The Wild",
     game2: "spec ops: The Line",
