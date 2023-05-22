@@ -39,7 +39,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="max-w-[1920] px-[30px] mx-auto h-[100px] bg-primary-100 grid grid-cols-3 fixed z-50">
+    <div className="max-w-[1920] px-[30px] mx-auto h-[100px] bg-primary-100 grid grid-cols-3 fixed z-50 top-0">
       <div className="flex">
         <RxHamburgerMenu
           onClick={() => setNav(!nav)}
