@@ -13,6 +13,7 @@ module.exports = {
         700: "#FDCA52",
         800: "#6dc849",
         900: "#C30101",
+        transparent: "transparent",
       },
     },
     extend: {
