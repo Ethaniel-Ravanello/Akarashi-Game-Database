@@ -75,13 +75,13 @@ const SideNav = ({ nav, setNav }: Props) => {
               />
               <p className="pt-1.5 ml-2">Developers</p>
             </li>
-            <li className="text-xl group flex font-medium my-4 cursor-pointer">
+            {/* <li className="text-xl group flex font-medium my-4 cursor-pointer">
               <BsPeopleFill
                 className="text-primary-400 group-hover:bg-primary-400 group-hover:text-primary-100 w-fit h-fit bg-primary-300 p-1.5 rounded-lg"
                 size={25}
               />
               <p className="pt-1.5 ml-2">Creator</p>
-            </li>
+            </li> */}
             <li className="text-xl group flex font-medium my-4 cursor-pointer">
               <MdPublish
                 className="text-primary-400 group-hover:bg-primary-400 group-hover:text-primary-100 w-fit h-fit bg-primary-300 p-1.5 rounded-lg"

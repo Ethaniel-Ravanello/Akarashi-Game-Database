@@ -5,8 +5,6 @@ interface Platform {
   game1: string;
   game2: string;
   game3: string;
-  game4: string;
-  game5: string;
 }
 
 const Platform: Platform[] = [
@@ -17,8 +15,6 @@ const Platform: Platform[] = [
     game1: "Counter Strike: Global Offensive",
     game2: "Portal 2",
     game3: "VALORANT",
-    game4: "NieR: Automata",
-    game5: "DrakenGard 3",
   },
 
   {
@@ -28,8 +24,6 @@ const Platform: Platform[] = [
     game1: "God Of War: Ragnarok",
     game2: "Uncharted 4: The Thieves End",
     game3: "Spiderman",
-    game4: "Horizon Zero Dawn: Forbidden West",
-    game5: "The Last Of Us",
   },
   {
     platform: "XBOX 1 X/S",
@@ -39,8 +33,6 @@ const Platform: Platform[] = [
     game1: "Halo Infinite",
     game2: "Forza Horizon 5",
     game3: "Titanfall 2",
-    game4: "Need For Speed: Payback",
-    game5: "A Way Out",
   },
   {
     platform: "SWITCH",
@@ -49,7 +41,5 @@ const Platform: Platform[] = [
     game1: "The Legend Of Zelda: Tears Of The Kingdom",
     game2: "The Legend Of Zelda: Breath Of The Wild",
     game3: "Animal Crossing",
-    game4: "NieR: Automata",
-    game5: "Fire Emblem : Engage",
   },
 ];
