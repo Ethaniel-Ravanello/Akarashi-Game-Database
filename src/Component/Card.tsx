@@ -15,6 +15,7 @@ type Props = {
   genre: any;
   esrb: any;
   realese: string;
+  added: number;
 };
 
 const Card = ({
@@ -27,6 +28,7 @@ const Card = ({
   genre,
   esrb,
   realese,
+  added,
 }: Props) => {
   return (
     <div
@@ -103,8 +105,13 @@ const Card = ({
         <p className="text-3xl font-bold cursor-pointer hover:text-primary-300">
           {name}
         </p>
-        <div className="w-fit h-fit bg-primary-300 text-primary-400 rounded-lg p-2 mt-5">
-          <span>{rating}</span>
+        <div className="w-full h-fit flex justify-between text-primary-400 rounded-lg p-2 mt-5">
+          <span className="bg-primary-300 py-2 px-3 font-semibold rounded-lg">
+            {rating}
+          </span>
+          <p className="bg-primary-300 py-2 px-3 font-semibold rounded-lg">
+            {added.toLocaleString()}
+          </p>
         </div>
       </div>
 

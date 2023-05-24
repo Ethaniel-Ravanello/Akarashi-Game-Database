@@ -8,6 +8,7 @@ interface Data {
   genres: Array<Object>;
   esrb_rating: Object;
   released: string;
+  added: number;
 }
 
 export type { Data };

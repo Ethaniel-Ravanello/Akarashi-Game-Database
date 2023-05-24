@@ -79,7 +79,7 @@ const Genres: Genres[] = [
     },
     game3: {
       name: "Tomb Raider (2013)",
-      player: "9.308",
+      player: "9,308",
       id: 5286,
     },
   },
@@ -90,7 +90,7 @@ const Genres: Genres[] = [
     popular_items: "9.120",
     game1: {
       name: "Outlast",
-      player: "7.231",
+      player: "7,231",
       id: 3790,
     },
     game2: {
@@ -100,7 +100,7 @@ const Genres: Genres[] = [
     },
     game3: {
       name: "Resident Evil 7: Biohazard",
-      player: "11.322",
+      player: "11,322",
       id: 480,
     },
   },

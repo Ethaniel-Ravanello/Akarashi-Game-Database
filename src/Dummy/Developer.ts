@@ -26,7 +26,7 @@ const Developer: Developer[] = [
     popular_items: "334",
     game1: {
       name: "Assasing Creed IV: Black Flag",
-      player: "9.308",
+      player: "9,308",
       id: 3841,
     },
     game2: {
@@ -36,7 +36,7 @@ const Developer: Developer[] = [
     },
     game3: {
       name: "Far Cry 3",
-      player: "8.549",
+      player: "8,549",
       id: 4161,
     },
   },
@@ -88,7 +88,7 @@ const Developer: Developer[] = [
     popular_items: "355",
     game1: {
       name: "Deus Ex Human Revolution",
-      player: "9.799",
+      player: "9,799",
       id: 4440,
     },
     game2: {

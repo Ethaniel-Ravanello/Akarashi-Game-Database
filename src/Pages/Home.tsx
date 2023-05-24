@@ -75,6 +75,7 @@ const Home = () => {
                 genre={data.genres}
                 esrb={data.esrb_rating}
                 realese={data.released}
+                added={data.added}
               />
             ))
           ) : (

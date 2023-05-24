@@ -52,7 +52,7 @@ const Platform: Platform[] = [
     },
     game2: {
       name: "Uncharted 4: A Thief's End",
-      player: "15.398",
+      player: "15,398",
       id: 2462,
     },
     game3: {
@@ -73,12 +73,12 @@ const Platform: Platform[] = [
     },
     game2: {
       name: "Forza Horizon 4",
-      player: "11.108",
+      player: "11,108",
       id: 58753,
     },
     game3: {
       name: "Titanfall 2",
-      player: "8.387",
+      player: "8,387",
       id: 923,
     },
   },

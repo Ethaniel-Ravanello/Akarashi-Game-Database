@@ -2,9 +2,21 @@ interface Stores {
   platform: string;
   image: string;
   popular_items: string;
-  game1: string;
-  game2: string;
-  game3: string;
+  game1: {
+    name: string;
+    player: string;
+    id: number;
+  };
+  game2: {
+    name: string;
+    player: string;
+    id: number;
+  };
+  game3: {
+    name: string;
+    player: string;
+    id: number;
+  };
 }
 
 const Stores: Stores[] = [
@@ -12,16 +24,32 @@ const Stores: Stores[] = [
     platform: "Steam",
     image: "https://wallpapercave.com/wp/wp11318812.jpg",
     popular_items: "1,308",
-    game1: "Grand Theft Auto V",
-    game2: "The Witcher 3: Wild Hunt",
-    game3: "Counter strike: Global Offensive",
+    game1: {
+      name: "Grand Theft Auto V",
+      player: "19,394",
+      id: 3498,
+    },
+    game2: {
+      name: "The Witcher 3: Wild Hunt",
+      player: "18,572",
+      id: 3228,
+    },
+    game3: {
+      name: "Counter-Strike: Global Offensive",
+      player: "15,182",
+      id: 4291,
+    },
   },
 
   {
     platform: "Playstation Stores",
     image: "https://wallpapercave.com/wp/wp9041296.jpg",
     popular_items: "579",
-    game1: "God Of War: Ragnarok",
+    game1: {
+      name: "God Of War: Ragnarok",
+      player: "18,569",
+      id: 494384,
+    },
     game2: "The Witcher 3: Wild Hunt",
     game3: "Portal 2",
   },
