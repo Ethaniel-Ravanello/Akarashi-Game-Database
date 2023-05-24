@@ -105,3 +105,5 @@ const Genres: Genres[] = [
     },
   },
 ];
+
+export default Genres;

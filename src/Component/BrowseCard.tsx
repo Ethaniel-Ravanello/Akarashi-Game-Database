@@ -1,12 +1,19 @@
-import React from "react";
+import { PropsBrowse } from "../Utils/browse";
 
-const BrowseCard = () => {
+const BrowseCard = ({
+  platform,
+  image,
+  popular_items,
+  game1,
+  game2,
+  game3,
+}: PropsBrowse) => {
   return (
     <div>
       <div className="relative w-[350px] md:w-[450px] h-[350px] rounded-lg mb-10">
         <div className="z-10">
           <img
-            src="https://wallpapercave.com/wp/wp11520704.jpg"
+            src={image}
             className="w-full h-full object-cover absolute -z-10 inset-0 rounded-lg"
             alt=""
           />
@@ -15,7 +22,7 @@ const BrowseCard = () => {
           <div className="w-full h-full z-20 relative">
             <div className="w-fit mx-auto">
               <h1 className="text-4xl font-bold flex justify-center pt-20 mb-1">
-                PC
+                {platform}
               </h1>
               <div className="w-full h-[2px] bg-primary-400 mb-3"></div>
             </div>
@@ -26,15 +33,24 @@ const BrowseCard = () => {
             <div className="w-full px-3">
               <div className="flex justify-between mb-2">
                 <p>Popular Items</p>
-                <p>123,456</p>
+                <p>{popular_items}</p>
               </div>
 
               <div className="w-full h-[2px] bg-primary-600 mb-3"></div>
 
               <div className="">
-                <p>Grand Theft Auto</p>
-                <p className="my-2">Portal 2</p>
-                <p>DOOM Eternal</p>
+                <div className="flex justify-between">
+                  <p>{game1.name}</p>
+                  <p>{game1.player}</p>
+                </div>
+                <div className="flex justify-between my-2">
+                  <p>{game2.name}</p>
+                  <p>{game2.player}</p>
+                </div>
+                <div className="flex justify-between">
+                  <p>{game3.name}</p>
+                  <p>{game3.player}</p>
+                </div>
               </div>
             </div>
           </div>
