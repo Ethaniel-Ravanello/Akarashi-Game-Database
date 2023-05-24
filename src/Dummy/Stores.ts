@@ -50,24 +50,56 @@ const Stores: Stores[] = [
       player: "18,569",
       id: 494384,
     },
-    game2: "The Witcher 3: Wild Hunt",
-    game3: "Portal 2",
+    game2: {
+      name: "The Witcher 3: Wild Hunt",
+      player: "18,572",
+      id: 3228,
+    },
+    game3: {
+      name: "Portal 2",
+      player: "14,632",
+      id: 4200,
+    },
   },
   {
     platform: "XBOX Store",
     image:
       "https://wallpapersmug.com/download/1024x768/cc9656/halo-infinite-2020-soldier.jpg",
     popular_items: "2,209",
-    game1: "Grand Theft Auto V",
-    game2: "The Witcher 3: Wild Hunt",
-    game3: "Porta 2",
+    game1: {
+      name: "Grand Theft Auto V",
+      player: "19,394",
+      id: 3498,
+    },
+    game2: {
+      name: "The Witcher 3: Wild Hunt",
+      player: "18,572",
+      id: 3228,
+    },
+    game3: {
+      name: "Portal 2",
+      player: "14,632",
+      id: 4200,
+    },
   },
   {
     platform: "App Store",
     image: "https://wallpapercave.com/wp/wp11520704.jpg",
     popular_items: "75,053",
-    game1: "Tomb Raider (2013)",
-    game2: "Bioshock Infinite",
-    game3: "Borderlands 2",
+    game1: {
+      name: "Tomb Raider (2013)",
+      player: "9.308",
+      id: 5286,
+    },
+    game2: {
+      name: "Bioshock Infinite",
+      player: "14,151",
+      id: 4062,
+    },
+    game3: {
+      name: "Borderlands 2",
+      player: "13,990",
+      id: 802,
+    },
   },
 ];
