@@ -22,7 +22,8 @@ interface Tags {
 const Tags: Tags[] = [
   {
     platform: "Singleplayer",
-    image: "https://wallpapercave.com/wp/wp11318812.jpg",
+    image:
+      "https://images.hdqwalls.com/download/shionne-tales-of-arise-zr-1280x720.jpg",
     popular_items: "120,456",
     game1: {
       name: "Elden Ring",
@@ -43,7 +44,7 @@ const Tags: Tags[] = [
 
   {
     platform: "Mulitplayer",
-    image: "https://wallpapercave.com/wp/wp9041296.jpg",
+    image: "https://wallpaperaccess.com/full/662210.png",
     popular_items: "10,567",
     game1: {
       name: "Valorant",
@@ -63,8 +64,7 @@ const Tags: Tags[] = [
   },
   {
     platform: "RPG",
-    image:
-      "https://wallpapersmug.com/download/1024x768/cc9656/halo-infinite-2020-soldier.jpg",
+    image: "https://wallpapercave.com/wp/xvUeEkP.jpg",
     popular_items: "2,209",
     game1: {
       name: "The Elder Scroll V: Skyrim",
@@ -84,7 +84,7 @@ const Tags: Tags[] = [
   },
   {
     platform: "Exploration",
-    image: "https://wallpapercave.com/wp/wp11520704.jpg",
+    image: "https://wallpapercave.com/wp/wp7648520.jpg",
     popular_items: "879",
     game1: {
       name: "Star Wars Jedi: Survivor",
@@ -103,3 +103,5 @@ const Tags: Tags[] = [
     },
   },
 ];
+
+export default Tags;

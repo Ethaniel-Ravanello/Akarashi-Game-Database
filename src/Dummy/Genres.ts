@@ -44,7 +44,7 @@ const Genres: Genres[] = [
 
   {
     platform: "Indie",
-    image: "https://wallpaperaccess.com/full/3690445.jpg",
+    image: "https://wallpaperaccess.com/full/2743248.jpg",
     popular_items: "52,725",
     game1: {
       name: "Ori and The Will of The Wisps",
@@ -85,8 +85,7 @@ const Genres: Genres[] = [
   },
   {
     platform: "Horror",
-    image:
-      "https://1.bp.blogspot.com/-LSmZDfZrN6M/V9Md5aQ1fiI/AAAAAAAAAcM/uRT2AIayhSUEP48GeHVebuEfxJ8aa_tVgCLcB/s1600/the_legend_of_Zelda-horse-sunlight-link-nintendo-wii-u-game-wallpapers.jpg",
+    image: "https://wallpapercave.com/wp/wp3001674.jpg",
     popular_items: "9.120",
     game1: {
       name: "Outlast",

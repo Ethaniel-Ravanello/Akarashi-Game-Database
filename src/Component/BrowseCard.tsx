@@ -1,5 +1,7 @@
 import { PropsBrowse } from "../Utils/browse";
 
+import { BsPerson } from "react-icons/bs";
+
 const BrowseCard = ({
   platform,
   image,
@@ -10,8 +12,8 @@ const BrowseCard = ({
 }: PropsBrowse) => {
   return (
     <div>
-      <div className="relative w-[350px] md:w-[450px] h-[350px] rounded-lg mb-10">
-        <div className="z-10">
+      <div className="relative w-[350px] md:w-[440px] h-[350px] rounded-lg mb-10">
+        <>
           <img
             src={image}
             className="w-full h-full object-cover absolute -z-10 inset-0 rounded-lg"
@@ -19,18 +21,19 @@ const BrowseCard = ({
           />
           <div className="absolute inset-0 bg-gradient-to-b from-primary-transparent via-primary-100 to-primary-100 opacity-90 rounded-b-lg"></div>
 
-          <div className="w-full h-full z-20 relative">
+          <div className="z-20 relative">
             <div className="w-fit mx-auto">
-              <h1 className="text-4xl font-bold flex justify-center pt-20 mb-1">
+              <h1 className="text-2xl font-bold flex justify-center pt-[3em] mb-1">
                 {platform}
               </h1>
               <div className="w-full h-[2px] bg-primary-400 mb-3"></div>
             </div>
-            <button className="flex justify-center bg-primary-400/30 backdrop-blur-xl py-3 px-8 w-fit h-fit mx-auto rounded-lg mb-5">
+
+            <button className="flex justify-center bg-primary-400/30 hover:bg-primary-400 hover:text-primary-100 backdrop-blur-xl py-3 px-8 w-fit h-fit mx-auto rounded-lg mb-5">
               Follow
             </button>
 
-            <div className="w-full px-3">
+            <div className="px-3">
               <div className="flex justify-between mb-2">
                 <p>Popular Items</p>
                 <p>{popular_items}</p>
@@ -41,20 +44,31 @@ const BrowseCard = ({
               <div className="">
                 <div className="flex justify-between">
                   <p>{game1.name}</p>
-                  <p>{game1.player}</p>
+                  <div className="flex w-[80px] justify-between">
+                    <BsPerson className="mt-1 mr-2" />
+                    <p>{game1.player}</p>
+                  </div>
                 </div>
+
                 <div className="flex justify-between my-2">
                   <p>{game2.name}</p>
-                  <p>{game2.player}</p>
+                  <div className="flex w-[80px] justify-between">
+                    <BsPerson className="mt-1 mr-2" />
+                    <p>{game2.player}</p>
+                  </div>
                 </div>
+
                 <div className="flex justify-between">
                   <p>{game3.name}</p>
-                  <p>{game3.player}</p>
+                  <div className="flex w-[80px] justify-between">
+                    <BsPerson className="mt-1 mr-2" />
+                    <p>{game3.player}</p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
+        </>
       </div>
     </div>
   );

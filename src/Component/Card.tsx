@@ -1,4 +1,9 @@
-import { AiFillApple, AiFillAndroid, AiFillChrome } from "react-icons/ai";
+import {
+  AiFillApple,
+  AiFillAndroid,
+  AiFillChrome,
+  AiOutlinePlus,
+} from "react-icons/ai";
 import { FaPlaystation, FaXbox } from "react-icons/fa";
 import { SiNintendoswitch } from "react-icons/si";
 import { RiComputerLine } from "react-icons/ri";
@@ -109,9 +114,14 @@ const Card = ({
           <span className="bg-primary-300 py-2 px-3 font-semibold rounded-lg">
             {rating}
           </span>
-          <p className="bg-primary-300 py-2 px-3 font-semibold rounded-lg">
-            {added.toLocaleString()}
-          </p>
+          <div className="flex bg-primary-300 py-2 px-3 font-semibold rounded-lg">
+            <AiOutlinePlus
+              size={22}
+              fontWeight={30}
+              className="font-bold mr-3"
+            />
+            <p className="">{added.toLocaleString()}</p>
+          </div>
         </div>
       </div>
 

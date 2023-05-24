@@ -21,7 +21,7 @@ interface Publishers {
 const Publishers: Publishers[] = [
   {
     platform: "Electronic Arts",
-    image: "https://wallpapercave.com/wp/wp11318812.jpg",
+    image: "https://wallpapercave.com/wp/2LYC0WB.jpg",
     popular_items: "1,308",
     game1: {
       name: "Portal 2",
@@ -42,7 +42,7 @@ const Publishers: Publishers[] = [
 
   {
     platform: "Square Enix",
-    image: "https://wallpapercave.com/wp/wp9041296.jpg",
+    image: "https://cdn.wallpapersafari.com/74/27/r7VteI.jpg",
     popular_items: "579",
     game1: {
       name: "Tomb Raider (2013)",
@@ -63,7 +63,7 @@ const Publishers: Publishers[] = [
   {
     platform: "Ubisoft Entertainment",
     image:
-      "https://wallpapersmug.com/download/1024x768/cc9656/halo-infinite-2020-soldier.jpg",
+      "https://3.bp.blogspot.com/-mFCYInEaetM/UOXpy8xIVaI/AAAAAAAAUTs/tB3Verwf0gk/s1600/Far_Cry_3_Wallpaper.jpg",
     popular_items: "2,209",
     game1: {
       name: "Far Cry 3",
@@ -83,7 +83,7 @@ const Publishers: Publishers[] = [
   },
   {
     platform: "Microsoft Studios",
-    image: "https://wallpapercave.com/wp/wp11520704.jpg",
+    image: "https://cdn.wccftech.com/wp-content/uploads/2016/03/Alan-Wake.jpg",
     popular_items: "493",
     game1: {
       name: "Alan Wake",
@@ -102,3 +102,5 @@ const Publishers: Publishers[] = [
     },
   },
 ];
+
+export default Publishers;

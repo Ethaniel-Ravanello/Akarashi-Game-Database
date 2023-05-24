@@ -22,7 +22,8 @@ interface Platform {
 const Platform: Platform[] = [
   {
     platform: "PC",
-    image: "https://wallpapercave.com/wp/wp11318812.jpg",
+    image:
+      "https://wallsdesk.com/wp-content/uploads/2016/08/Counter-Strike-Global-Offensive-Wallpapers-and-Backgrounds.jpg",
     popular_items: "512,535",
     game1: {
       name: "Counter Strike: Global Offensive",
@@ -84,7 +85,7 @@ const Platform: Platform[] = [
   },
   {
     platform: "Nintendo Switch",
-    image: "https://wallpapercave.com/wp/wp11520704.jpg",
+    image: "https://wallpapercave.com/wp/7K7LOUq.jpg",
     popular_items: "879",
     game1: {
       name: "Bayonetta 2",
@@ -103,3 +104,5 @@ const Platform: Platform[] = [
     },
   },
 ];
+
+export default Platform;

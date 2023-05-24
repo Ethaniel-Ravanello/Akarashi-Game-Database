@@ -22,7 +22,8 @@ interface Stores {
 const Stores: Stores[] = [
   {
     platform: "Steam",
-    image: "https://wallpapercave.com/wp/wp11318812.jpg",
+    image:
+      "https://www.hdwallpaper.nu/wp-content/uploads/2017/02/halflife_2-10.jpg",
     popular_items: "1,308",
     game1: {
       name: "Grand Theft Auto V",
@@ -43,7 +44,7 @@ const Stores: Stores[] = [
 
   {
     platform: "Playstation Stores",
-    image: "https://wallpapercave.com/wp/wp9041296.jpg",
+    image: "https://images7.alphacoders.com/749/thumb-1920-749807.png",
     popular_items: "579",
     game1: {
       name: "God Of War: Ragnarok",
@@ -63,8 +64,7 @@ const Stores: Stores[] = [
   },
   {
     platform: "XBOX Store",
-    image:
-      "https://wallpapersmug.com/download/1024x768/cc9656/halo-infinite-2020-soldier.jpg",
+    image: "https://wallpapercave.com/wp/wp1905495.jpg",
     popular_items: "2,209",
     game1: {
       name: "Grand Theft Auto V",
@@ -84,7 +84,7 @@ const Stores: Stores[] = [
   },
   {
     platform: "App Store",
-    image: "https://wallpapercave.com/wp/wp11520704.jpg",
+    image: "https://wallpapercave.com/wp/7zrUXEH.jpg",
     popular_items: "75,053",
     game1: {
       name: "Tomb Raider (2013)",
@@ -103,3 +103,5 @@ const Stores: Stores[] = [
     },
   },
 ];
+
+export default Stores;

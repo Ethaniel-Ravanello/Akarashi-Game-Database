@@ -22,7 +22,7 @@ interface Developer {
 const Developer: Developer[] = [
   {
     platform: "Ubisoft",
-    image: "https://wallpapercave.com/wp/wp11318812.jpg",
+    image: "https://img.wallpapersafari.com/desktop/1440/900/22/91/xNYv8a.jpg",
     popular_items: "334",
     game1: {
       name: "Assasing Creed IV: Black Flag",
@@ -43,7 +43,8 @@ const Developer: Developer[] = [
 
   {
     platform: "Electronic Arts",
-    image: "https://wallpapercave.com/wp/wp9041296.jpg",
+    image:
+      "https://www.wallpaperbetter.com/wallpaper/476/1013/99/battlefield-hardline-game-1080P-wallpaper-middle-size.jpg",
     popular_items: "325",
     game1: {
       name: "Dead Space (2008)",
@@ -64,7 +65,7 @@ const Developer: Developer[] = [
   {
     platform: "Sony Interactive Entertainment",
     image:
-      "https://wallpapersmug.com/download/1024x768/cc9656/halo-infinite-2020-soldier.jpg",
+      "https://images.hdqwalls.com/download/bloodborne-ps4-game-1280x720.jpg",
     popular_items: "552",
     game1: {
       name: "Bloodborne",
@@ -84,7 +85,8 @@ const Developer: Developer[] = [
   },
   {
     platform: "Square Enix",
-    image: "https://wallpapercave.com/wp/wp11520704.jpg",
+    image:
+      "https://images.hdqwalls.com/download/1/nier-automata-4k-qu-1280x720.jpg",
     popular_items: "355",
     game1: {
       name: "Deus Ex Human Revolution",
@@ -103,3 +105,5 @@ const Developer: Developer[] = [
     },
   },
 ];
+
+export default Developer;
