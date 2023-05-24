@@ -2,44 +2,104 @@ interface Platform {
   platform: string;
   image: string;
   popular_items: string;
-  game1: string;
-  game2: string;
-  game3: string;
+  game1: {
+    name: string;
+    player: string;
+    id: number;
+  };
+  game2: {
+    name: string;
+    player: string;
+    id: number;
+  };
+  game3: {
+    name: string;
+    player: string;
+    id: number;
+  };
 }
 
 const Platform: Platform[] = [
   {
     platform: "PC",
     image: "https://wallpapercave.com/wp/wp11318812.jpg",
-    popular_items: "120,456",
-    game1: "Counter Strike: Global Offensive",
-    game2: "Portal 2",
-    game3: "VALORANT",
+    popular_items: "512,535",
+    game1: {
+      name: "Counter Strike: Global Offensive",
+      player: "19,389",
+      id: 4291,
+    },
+    game2: {
+      name: "The Witcher 3: Wild Hunt",
+      player: "18.569",
+      id: 3328,
+    },
+    game3: {
+      name: "Portal 2",
+      player: "17,499",
+      id: 13536,
+    },
   },
 
   {
     platform: "Playstation",
     image: "https://wallpapercave.com/wp/wp9041296.jpg",
     popular_items: "10,567",
-    game1: "God Of War: Ragnarok",
-    game2: "Uncharted 4: The Thieves End",
-    game3: "Spiderman",
+    game1: {
+      name: "God Of War: Ragnarok",
+      player: "18,569",
+      id: 494384,
+    },
+    game2: {
+      name: "Uncharted 4: A Thief's End",
+      player: "15.398",
+      id: 2462,
+    },
+    game3: {
+      name: "Destiny 2",
+      player: "12,355",
+      id: 32,
+    },
   },
   {
     platform: "XBOX 1 X/S",
     image:
       "https://wallpapersmug.com/download/1024x768/cc9656/halo-infinite-2020-soldier.jpg",
     popular_items: "2,209",
-    game1: "Halo Infinite",
-    game2: "Forza Horizon 5",
-    game3: "Titanfall 2",
+    game1: {
+      name: "Halo Infinite",
+      player: "18,835",
+      id: 58751,
+    },
+    game2: {
+      name: "Forza Horizon 4",
+      player: "11.108",
+      id: 58753,
+    },
+    game3: {
+      name: "Titanfall 2",
+      player: "8.387",
+      id: 923,
+    },
   },
   {
-    platform: "SWITCH",
+    platform: "Nintendo Switch",
     image: "https://wallpapercave.com/wp/wp11520704.jpg",
     popular_items: "879",
-    game1: "The Legend Of Zelda: Tears Of The Kingdom",
-    game2: "The Legend Of Zelda: Breath Of The Wild",
-    game3: "Animal Crossing",
+    game1: {
+      name: "Bayonetta 2",
+      player: "12.238",
+      id: 23760,
+    },
+    game2: {
+      name: "The Legend Of Zelda: Breath Of The Wild",
+      player: "19.823",
+      id: 22511,
+    },
+    game3: {
+      name: "Animal Crossing",
+      player: "4,263",
+      id: 54346,
+    },
   },
 ];
