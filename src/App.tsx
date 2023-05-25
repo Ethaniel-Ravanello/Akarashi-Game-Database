@@ -6,6 +6,7 @@ import "./App.css";
 
 const Home = lazy(() => import("./Pages/Home"));
 const Browse = lazy(() => import("./Pages/Browse"));
+const Genres = lazy(() => import("./Pages/Genres"));
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/browse" element={<Browse />} />
+            <Route path="/genres" element={<Genres />} />
           </Routes>
         </Layout>
       </BrowserRouter>

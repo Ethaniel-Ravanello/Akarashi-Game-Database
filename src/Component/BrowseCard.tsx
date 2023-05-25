@@ -12,7 +12,7 @@ const BrowseCard = ({
 }: PropsBrowse) => {
   return (
     <div>
-      <div className="relative w-[350px] md:w-[440px] h-[350px] rounded-lg mb-10">
+      <div className="relative w-[300px] md:w-[440px] h-fit pb-3 rounded-lg mb-10">
         <>
           <img
             src={image}
@@ -43,7 +43,9 @@ const BrowseCard = ({
 
               <div className="">
                 <div className="flex justify-between">
-                  <p>{game1.name}</p>
+                  <p className="cursor-pointer hover:text-primary-600 underline underline-offset-4">
+                    {game1.name}
+                  </p>
                   <div className="flex w-[80px] justify-between">
                     <BsPerson className="mt-1 mr-2" />
                     <p>{game1.player}</p>
@@ -51,7 +53,9 @@ const BrowseCard = ({
                 </div>
 
                 <div className="flex justify-between my-2">
-                  <p>{game2.name}</p>
+                  <p className="cursor-pointer hover:text-primary-600 underline underline-offset-4">
+                    {game2.name}
+                  </p>
                   <div className="flex w-[80px] justify-between">
                     <BsPerson className="mt-1 mr-2" />
                     <p>{game2.player}</p>
@@ -59,7 +63,9 @@ const BrowseCard = ({
                 </div>
 
                 <div className="flex justify-between">
-                  <p>{game3.name}</p>
+                  <p className="cursor-pointer hover:text-primary-600 underline underline-offset-4">
+                    {game3.name}
+                  </p>
                   <div className="flex w-[80px] justify-between">
                     <BsPerson className="mt-1 mr-2" />
                     <p>{game3.player}</p>

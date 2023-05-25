@@ -41,12 +41,12 @@ const Home = () => {
 
   return (
     <div>
-      <div className="max-w-[1920px] h-[80vh] mx-auto relative">
-        <div className=" h-full rounded-xl bg-[url('./Banner.jpg')] bg-fixed">
+      <div className="max-w-[1920px] h-[100vh] mx-auto relative">
+        <div className=" h-full rounded-xl bg-[url('./Banner.jpg')] bg-fixed bg-center">
           <div className=" w-full h-full inset-0 absolute rounded-xl bg-primary-100 bg-opacity-80"></div>
         </div>
 
-        <div className="absolute mt-[200px] inset-0 text-center">
+        <div className="absolute mt-[300px] inset-0 text-center">
           <h1 className=" text-3xl lg:text-9xl text-primary-400 font-semibold">
             THIS IS AKARASHI
           </h1>
@@ -83,7 +83,7 @@ const Home = () => {
           )}
         </div>
 
-        <div className=" flex w-fit h-[200px] mx-auto mt-20 pt-10 mb-10">
+        <div className=" flex w-fit h-[100px] mx-auto mt-20 pt-10">
           <MdKeyboardArrowLeft
             onClick={() => {
               setPage(page - 1);

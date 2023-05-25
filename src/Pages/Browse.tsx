@@ -10,17 +10,26 @@ import type { PropsBrowse } from "../Utils/browse";
 
 import BrowseCard from "../Component/BrowseCard";
 import Spinner from "../Component/Spinner";
+import { IoIosArrowForward } from "react-icons/io";
 
 const Browse = () => {
   const [loading, setLoading] = useState(false);
   return (
     <>
-      <div className="text-primary-400 w-[100%] h-[100%] pl-8">
-        <h1 className="text-6xl font-bold mt-[120px] mb-10">Browse</h1>
+      <div className="text-primary-400 w-[100%] h-[100%]">
+        <h1 className="text-6xl font-bold mt-[120px] mb-10 pl-8">Browse</h1>
 
-        <div>
-          <h2 className="text-4xl font-bold mb-5">Genres</h2>
-          <div className="flex gap-x-5 justify-around flex-wrap mb-2 pr-3">
+        <div className="px-5">
+          <div className="w-fit  font-bold mb-5 flex cursor-pointer hover:text-primary-600">
+            <h2 className="underline-offset-4 underline text-2xl pt-1.5 md:text-4xl md:pt-1">
+              Genres
+            </h2>
+            <span className="flex font-medium text-primary-600 ml-5 no-underline pt-2 md:pt-3 text-2xl">
+              19 <IoIosArrowForward className="pt-2 md:pt-1" />
+            </span>
+          </div>
+
+          <div className="flex gap-x-7 justify-start overflow-x-scroll lg:overflow-x-hidden mb-2 pr-3">
             {Genres && loading === false ? (
               Genres.map((data: PropsBrowse) => (
                 <BrowseCard
@@ -38,9 +47,16 @@ const Browse = () => {
           </div>
         </div>
 
-        <div>
-          <h2 className="text-4xl font-bold mb-5">Developer</h2>
-          <div className="flex gap-x-5 justify-around flex-wrap mb-2 pr-3">
+        <div className="px-5">
+          <div className="w-fit  font-bold mb-5 flex cursor-pointer hover:text-primary-600">
+            <h2 className="underline-offset-4 underline text-2xl pt-1.5 md:text-4xl md:pt-1">
+              Developers
+            </h2>
+            <span className="flex font-medium text-primary-600 ml-5 no-underline pt-2 md:pt-3 text-2xl">
+              435,016 <IoIosArrowForward className="pt-2 md:pt-1" />
+            </span>
+          </div>
+          <div className="flex gap-x-7 justify-start overflow-x-scroll lg:overflow-x-hidden mb-2 pr-3">
             {Developer && loading === false ? (
               Developer.map((data: PropsBrowse) => (
                 <BrowseCard
@@ -58,9 +74,16 @@ const Browse = () => {
           </div>
         </div>
 
-        <div>
-          <h2 className="text-4xl font-bold mb-5">Platform</h2>
-          <div className="flex gap-x-5 justify-around flex-wrap mb-2 pr-3">
+        <div className="px-5">
+          <div className="w-fit  font-bold mb-5 flex cursor-pointer hover:text-primary-600">
+            <h2 className="underline-offset-4 underline text-2xl pt-1.5 md:text-4xl md:pt-1">
+              Platforms
+            </h2>
+            <span className="flex font-medium text-primary-600 ml-5 no-underline pt-2 md:pt-3 text-2xl">
+              51 <IoIosArrowForward className="pt-2 md:pt-1" />
+            </span>
+          </div>
+          <div className="flex gap-x-7 justify-start overflow-x-scroll lg:overflow-x-hidden mb-2 pr-3">
             {Platform && loading === false ? (
               Platform.map((data: PropsBrowse) => (
                 <BrowseCard
@@ -78,9 +101,16 @@ const Browse = () => {
           </div>
         </div>
 
-        <div>
-          <h2 className="text-4xl font-bold mb-5">Publisher</h2>
-          <div className="flex gap-x-5 justify-around flex-wrap mb-2 pr-3">
+        <div className="px-5">
+          <div className="w-fit  font-bold mb-5 flex cursor-pointer hover:text-primary-600">
+            <h2 className="underline-offset-4 underline text-2xl pt-1.5 md:text-4xl md:pt-1">
+              Publishers
+            </h2>
+            <span className="flex font-medium text-primary-600 ml-5 no-underline pt-2 md:pt-3 text-2xl">
+              63,064 <IoIosArrowForward className="pt-2 md:pt-1" />
+            </span>
+          </div>
+          <div className="flex gap-x-7 justify-start overflow-x-scroll lg:overflow-x-hidden mb-2 pr-3">
             {Publisher && loading === false ? (
               Publisher.map((data: PropsBrowse) => (
                 <BrowseCard
@@ -98,9 +128,16 @@ const Browse = () => {
           </div>
         </div>
 
-        <div>
-          <h2 className="text-4xl font-bold mb-5">Store</h2>
-          <div className="flex gap-x-5 justify-around flex-wrap mb-2 pr-3">
+        <div className="px-5">
+          <div className="w-fit  font-bold mb-5 flex cursor-pointer hover:text-primary-600">
+            <h2 className="underline-offset-4 underline text-2xl pt-1.5 md:text-4xl md:pt-1">
+              Stores
+            </h2>
+            <span className="flex font-medium text-primary-600 ml-5 no-underline pt-2 md:pt-3 text-2xl">
+              10 <IoIosArrowForward className="pt-2 md:pt-1" />
+            </span>
+          </div>
+          <div className="flex gap-x-7 justify-start overflow-x-scroll lg:overflow-x-hidden mb-2 pr-3">
             {Store && loading === false ? (
               Store.map((data: PropsBrowse) => (
                 <BrowseCard
@@ -118,9 +155,16 @@ const Browse = () => {
           </div>
         </div>
 
-        <div>
-          <h2 className="text-4xl font-bold mb-5">Tags</h2>
-          <div className="flex gap-x-5 justify-around flex-wrap mb-2 pr-3">
+        <div className="px-5">
+          <div className="w-fit font-bold mb-5 flex cursor-pointer hover:text-primary-600">
+            <h2 className="underline-offset-4 underline text-2xl pt-1.5 md:text-4xl md:pt-1">
+              Tags
+            </h2>
+            <span className="flex font-medium text-primary-600 ml-5 no-underline pt-2 md:pt-3 text-2xl">
+              10,087 <IoIosArrowForward className="pt-2 md:pt-1" />
+            </span>
+          </div>
+          <div className="flex gap-x-7 justify-start overflow-x-scroll lg:overflow-x-hidden mb-2 pr-3">
             {Tags && loading === false ? (
               Tags.map((data: PropsBrowse) => (
                 <BrowseCard

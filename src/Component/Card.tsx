@@ -107,7 +107,7 @@ const Card = ({
           </div>
         </div>
 
-        <p className="text-3xl font-bold cursor-pointer hover:text-primary-300">
+        <p className="w-fit text-3xl font-bold cursor-pointer hover:text-primary-300">
           {name}
         </p>
         <div className="w-full h-fit flex justify-between text-primary-400 rounded-lg p-2 mt-5">
@@ -129,7 +129,10 @@ const Card = ({
         <div className="flex justify-between text-sm">
           <p>Rating</p>
           <div className="flex gap-2 ml-[30%]">
-            <p key={id} className="text-primary-400 underline">
+            <p
+              key={id}
+              className="text-primary-400 underline cursor-pointer hover:text-primary-600"
+            >
               {esrb?.name}
             </p>
           </div>
@@ -140,7 +143,10 @@ const Card = ({
           <div className="flex gap-2">
             {genre.map((data: any) => (
               <>
-                <p key={id} className="text-primary-400 underline">
+                <p
+                  key={id}
+                  className="text-primary-400 underline cursor-pointer hover:text-primary-600"
+                >
                   {data.name}
                 </p>
               </>
