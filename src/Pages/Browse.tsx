@@ -9,7 +9,6 @@ import Store from "../Dummy/Stores";
 import Tags from "../Dummy/Tags";
 import type { PropsBrowse } from "../Utils/browse";
 
-import BrowseCard from "../Component/BrowseCard";
 import GameCard from "../Component/GameCard";
 import Spinner from "../Component/Spinner";
 import { IoIosArrowForward } from "react-icons/io";
@@ -23,7 +22,10 @@ const Browse = () => {
         <h1 className="text-6xl font-bold mt-[120px] mb-10 pl-8">Browse</h1>
 
         <div className="px-5">
-          <div className="w-fit  font-bold mb-5 flex cursor-pointer hover:text-primary-600">
+          <div
+            onClick={() => navigate("/genres")}
+            className="w-fit  font-bold mb-5 flex cursor-pointer hover:text-primary-600"
+          >
             <h2 className="underline-offset-4 underline text-2xl pt-1.5 md:text-4xl md:pt-1">
               Genres
             </h2>
@@ -58,7 +60,10 @@ const Browse = () => {
         </div>
 
         <div className="px-5">
-          <div className="w-fit  font-bold mb-5 flex cursor-pointer hover:text-primary-600">
+          <div
+            onClick={() => navigate("/developer")}
+            className="w-fit  font-bold mb-5 flex cursor-pointer hover:text-primary-600"
+          >
             <h2 className="underline-offset-4 underline text-2xl pt-1.5 md:text-4xl md:pt-1">
               Developers
             </h2>

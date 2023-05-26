@@ -31,8 +31,6 @@ const Home = () => {
 
   useEffect(() => {
     getData(page);
-    setPage(1);
-    getData(1);
   }, [fetching]);
 
   function goToTop() {

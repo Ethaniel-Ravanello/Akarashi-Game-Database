@@ -5,7 +5,7 @@ interface PropsBrowse {
   id: number;
   games: {
     name: string;
-    player: string;
+    added: string;
     id: number;
   }[];
   onClick?: () => void;

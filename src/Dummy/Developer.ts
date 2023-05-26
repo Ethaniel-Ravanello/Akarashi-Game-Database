@@ -5,7 +5,7 @@ interface Developer {
   id: number;
   games: {
     name: string;
-    player: string;
+    added: string;
     id: number;
   }[];
 }
@@ -19,17 +19,17 @@ const Developer: Developer[] = [
     games: [
       {
         name: "Assasing Creed IV: Black Flag",
-        player: "9,308",
+        added: "9,308",
         id: 3841,
       },
       {
         name: "Watch Dogs",
-        player: "8,630",
+        added: "8,630",
         id: 3687,
       },
       {
         name: "Far Cry 3",
-        player: "8,549",
+        added: "8,549",
         id: 4161,
       },
     ],
@@ -43,17 +43,17 @@ const Developer: Developer[] = [
     games: [
       {
         name: "Dead Space (2008)",
-        player: "8,588",
+        added: "8,588",
         id: 4570,
       },
       {
         name: "Brutal Legend",
-        player: "7,605",
+        added: "7,605",
         id: 5525,
       },
       {
         name: "Battlefield 1",
-        player: "6,905",
+        added: "6,905",
         id: 998,
       },
     ],
@@ -67,17 +67,17 @@ const Developer: Developer[] = [
     games: [
       {
         name: "Bloodborne",
-        player: "8,098",
+        added: "8,098",
         id: 3387,
       },
       {
         name: "Journey",
-        player: "7,889",
+        added: "7,889",
         id: 2354,
       },
       {
         name: "Resident Evil 2 (1998)",
-        player: "5,546",
+        added: "5,546",
         id: 5159,
       },
     ],
@@ -91,17 +91,17 @@ const Developer: Developer[] = [
     games: [
       {
         name: "Deus Ex Human Revolution",
-        player: "9,799",
+        added: "9,799",
         id: 4440,
       },
       {
         name: "NieR: Automata",
-        player: "8,166",
+        added: "8,166",
         id: 10141,
       },
       {
         name: "Just Cause 3",
-        player: "8,166",
+        added: "8,166",
         id: 3017,
       },
     ],

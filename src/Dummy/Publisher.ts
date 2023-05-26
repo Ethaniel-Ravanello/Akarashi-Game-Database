@@ -5,7 +5,7 @@ interface Publishers {
   id: number;
   games: {
     name: string;
-    player: string;
+    added: string;
     id: number;
   }[];
 }
@@ -19,17 +19,17 @@ const Publishers: Publishers[] = [
     games: [
       {
         name: "Portal 2",
-        player: "14,632",
+        added: "14,632",
         id: 4200,
       },
       {
         name: "Left 4 Dead 2",
-        player: "14,727",
+        added: "14,727",
         id: 12020,
       },
       {
         name: "Apex Legends",
-        player: "9,908",
+        added: "9,908",
         id: 290856,
       },
     ],
@@ -42,17 +42,17 @@ const Publishers: Publishers[] = [
     games: [
       {
         name: "Tomb Raider (2013)",
-        player: "9.308",
+        added: "9.308",
         id: 5286,
       },
       {
         name: "Life Is Strange",
-        player: "13,989",
+        added: "13,989",
         id: 3439,
       },
       {
         name: "Rise Of Tomb Raider",
-        player: "10,812",
+        added: "10,812",
         id: 7689,
       },
     ],
@@ -66,17 +66,17 @@ const Publishers: Publishers[] = [
     games: [
       {
         name: "Far Cry 3",
-        player: "9.311",
+        added: "9.311",
         id: 4161,
       },
       {
         name: "For Honor",
-        player: "8,633",
+        added: "8,633",
         id: 5286,
       },
       {
         name: "Assassin's Creed IV: Black Flag",
-        player: "8,551",
+        added: "8,551",
         id: 3841,
       },
     ],
@@ -89,17 +89,17 @@ const Publishers: Publishers[] = [
     games: [
       {
         name: "Alan Wake",
-        player: "9.176",
+        added: "9.176",
         id: 19487,
       },
       {
         name: "Rise Of Tomb Raider",
-        player: "10,812",
+        added: "10,812",
         id: 7689,
       },
       {
         name: "Limbo",
-        player: "12,490",
+        added: "12,490",
         id: 1030,
       },
     ],

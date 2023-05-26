@@ -5,7 +5,7 @@ interface Stores {
   id: number;
   games: {
     name: string;
-    player: string;
+    added: string;
     id: number;
   }[];
 }
@@ -20,17 +20,17 @@ const Stores: Stores[] = [
     games: [
       {
         name: "Grand Theft Auto V",
-        player: "19,394",
+        added: "19,394",
         id: 3498,
       },
       {
         name: "The Witcher 3: Wild Hunt",
-        player: "18,572",
+        added: "18,572",
         id: 3228,
       },
       {
         name: "Counter-Strike: Global Offensive",
-        player: "15,182",
+        added: "15,182",
         id: 4291,
       },
     ],
@@ -43,17 +43,17 @@ const Stores: Stores[] = [
     games: [
       {
         name: "God Of War: Ragnarok",
-        player: "18,569",
+        added: "18,569",
         id: 494384,
       },
       {
         name: "The Witcher 3: Wild Hunt",
-        player: "18,572",
+        added: "18,572",
         id: 3228,
       },
       {
         name: "Portal 2",
-        player: "14,632",
+        added: "14,632",
         id: 4200,
       },
     ],
@@ -66,17 +66,17 @@ const Stores: Stores[] = [
     games: [
       {
         name: "Grand Theft Auto V",
-        player: "19,394",
+        added: "19,394",
         id: 3498,
       },
       {
         name: "The Witcher 3: Wild Hunt",
-        player: "18,572",
+        added: "18,572",
         id: 3228,
       },
       {
         name: "Portal 2",
-        player: "14,632",
+        added: "14,632",
         id: 4200,
       },
     ],
@@ -89,17 +89,17 @@ const Stores: Stores[] = [
     games: [
       {
         name: "Tomb Raider (2013)",
-        player: "9.308",
+        added: "9.308",
         id: 5286,
       },
       {
         name: "Bioshock Infinite",
-        player: "14,151",
+        added: "14,151",
         id: 4062,
       },
       {
         name: "Borderlands 2",
-        player: "13,990",
+        added: "13,990",
         id: 802,
       },
     ],

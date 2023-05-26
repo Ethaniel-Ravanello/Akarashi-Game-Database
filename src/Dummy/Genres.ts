@@ -5,7 +5,7 @@ interface Genre {
   id: number;
   games: {
     name: string;
-    player: string;
+    added: string;
     id: number;
   }[];
 }
@@ -20,17 +20,17 @@ const Genres: Genre[] = [
     games: [
       {
         name: "Red Dead Redemption 2",
-        player: "19,389",
+        added: "19,389",
         id: 28,
       },
       {
         name: "Cyberpunk 2077",
-        player: "18,569",
+        added: "18,569",
         id: 41494,
       },
       {
         name: "Uncharted 3: Drake Deception",
-        player: "15,292",
+        added: "15,292",
         id: 5703,
       },
     ],
@@ -43,17 +43,17 @@ const Genres: Genre[] = [
     games: [
       {
         name: "Ori and The Will of The Wisps",
-        player: "12,489",
+        added: "12,489",
         id: 28199,
       },
       {
         name: "Sky: Children Of The Light",
-        player: "11,413",
+        added: "11,413",
         id: 244698,
       },
       {
         name: "Limbo",
-        player: "11,263",
+        added: "11,263",
         id: 1030,
       },
     ],
@@ -67,17 +67,17 @@ const Genres: Genre[] = [
     games: [
       {
         name: "The Legend Of Zelda: Breath Of the Wild",
-        player: "19,389",
+        added: "19,389",
         id: 22511,
       },
       {
         name: "Horizon Zero Dawn",
-        player: "18,569",
+        added: "18,569",
         id: 278,
       },
       {
         name: "Tomb Raider (2013)",
-        player: "9,308",
+        added: "9,308",
         id: 5286,
       },
     ],
@@ -90,17 +90,17 @@ const Genres: Genre[] = [
     games: [
       {
         name: "Sid Meier's CivilizationV",
-        player: "8,636",
+        added: "8,636",
         id: 13633,
       },
       {
         name: "Company Of Heroes 2",
-        player: "8,557",
+        added: "8,557",
         id: 10243,
       },
       {
         name: "XCOM: Enemy Unknown",
-        player: "7,681",
+        added: "7,681",
         id: 13910,
       },
     ],

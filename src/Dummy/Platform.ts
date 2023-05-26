@@ -5,7 +5,7 @@ interface Game {
   id: number;
   games: {
     name: string;
-    player: string;
+    added: string;
     id: number;
   }[];
 }
@@ -20,17 +20,17 @@ const Platform: Game[] = [
     games: [
       {
         name: "Counter Strike: Global Offensive",
-        player: "19,389",
+        added: "19,389",
         id: 4291,
       },
       {
         name: "The Witcher 3: Wild Hunt",
-        player: "18.569",
+        added: "18.569",
         id: 3328,
       },
       {
         name: "Portal 2",
-        player: "17,499",
+        added: "17,499",
         id: 13536,
       },
     ],
@@ -43,17 +43,17 @@ const Platform: Game[] = [
     games: [
       {
         name: "God Of War: Ragnarok",
-        player: "18,569",
+        added: "18,569",
         id: 494384,
       },
       {
         name: "Uncharted 4: A Thief's End",
-        player: "15,398",
+        added: "15,398",
         id: 2462,
       },
       {
         name: "Destiny 2",
-        player: "12,355",
+        added: "12,355",
         id: 32,
       },
     ],
@@ -67,17 +67,17 @@ const Platform: Game[] = [
     games: [
       {
         name: "Halo Infinite",
-        player: "18,835",
+        added: "18,835",
         id: 58751,
       },
       {
         name: "Forza Horizon 4",
-        player: "11,108",
+        added: "11,108",
         id: 58753,
       },
       {
         name: "Titanfall 2",
-        player: "8,387",
+        added: "8,387",
         id: 923,
       },
     ],
@@ -90,17 +90,17 @@ const Platform: Game[] = [
     games: [
       {
         name: "Bayonetta 2",
-        player: "12.238",
+        added: "12.238",
         id: 23760,
       },
       {
         name: "The Legend Of Zelda: Breath Of The Wild",
-        player: "19.823",
+        added: "19.823",
         id: 22511,
       },
       {
         name: "Animal Crossing",
-        player: "4,263",
+        added: "4,263",
         id: 54346,
       },
     ],
