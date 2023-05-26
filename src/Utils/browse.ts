@@ -1,23 +1,14 @@
 interface PropsBrowse {
   platform: string;
-  image: string;
   popular_items: string;
-  game1: {
+  image: string;
+  id: number;
+  games: {
     name: string;
     player: string;
     id: number;
-  };
-  game2: {
-    name: string;
-    player: string;
-    id: number;
-  };
-  game3: {
-    name: string;
-    player: string;
-    id: number;
-  };
-  onClick?: any;
+  }[];
+  onClick?: () => void;
 }
 
 export type { PropsBrowse };

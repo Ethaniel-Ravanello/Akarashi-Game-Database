@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router";
 
 import Genres from "../Dummy/Genres";
 import Developer from "../Dummy/Developer";
@@ -9,11 +10,13 @@ import Tags from "../Dummy/Tags";
 import type { PropsBrowse } from "../Utils/browse";
 
 import BrowseCard from "../Component/BrowseCard";
+import GameCard from "../Component/GameCard";
 import Spinner from "../Component/Spinner";
 import { IoIosArrowForward } from "react-icons/io";
 
 const Browse = () => {
   const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
   return (
     <>
       <div className="text-primary-400 w-[100%] h-[100%]">
@@ -32,13 +35,20 @@ const Browse = () => {
           <div className="flex gap-x-7 justify-start overflow-x-scroll 2xl:overflow-x-hidden mb-2 pr-3">
             {Genres && loading === false ? (
               Genres.map((data: PropsBrowse) => (
-                <BrowseCard
+                <GameCard
                   platform={data.platform}
                   popular_items={data.popular_items}
                   image={data.image}
-                  game1={data.game1}
-                  game2={data.game2}
-                  game3={data.game3}
+                  games={data.games}
+                  id={data.id}
+                  onClick={() => {
+                    navigate(`/genres/${data.platform}`, {
+                      state: {
+                        id: data.id,
+                        name: data.platform,
+                      },
+                    });
+                  }}
                 />
               ))
             ) : (
@@ -59,13 +69,20 @@ const Browse = () => {
           <div className="flex gap-x-7 justify-start overflow-x-scroll 2xl:overflow-x-hidden mb-2 pr-3">
             {Developer && loading === false ? (
               Developer.map((data: PropsBrowse) => (
-                <BrowseCard
+                <GameCard
                   platform={data.platform}
                   popular_items={data.popular_items}
                   image={data.image}
-                  game1={data.game1}
-                  game2={data.game2}
-                  game3={data.game3}
+                  games={data.games}
+                  id={data.id}
+                  onClick={() => {
+                    navigate(`/genres/${data.platform}`, {
+                      state: {
+                        id: data.id,
+                        name: data.platform,
+                      },
+                    });
+                  }}
                 />
               ))
             ) : (
@@ -86,13 +103,20 @@ const Browse = () => {
           <div className="flex gap-x-7 justify-start overflow-x-scroll 2xl:overflow-x-hidden mb-2 pr-3">
             {Platform && loading === false ? (
               Platform.map((data: PropsBrowse) => (
-                <BrowseCard
+                <GameCard
                   platform={data.platform}
                   popular_items={data.popular_items}
                   image={data.image}
-                  game1={data.game1}
-                  game2={data.game2}
-                  game3={data.game3}
+                  games={data.games}
+                  id={data.id}
+                  onClick={() => {
+                    navigate(`/genres/${data.platform}`, {
+                      state: {
+                        id: data.id,
+                        name: data.platform,
+                      },
+                    });
+                  }}
                 />
               ))
             ) : (
@@ -113,13 +137,20 @@ const Browse = () => {
           <div className="flex gap-x-7 justify-start overflow-x-scroll 2xl:overflow-x-hidden mb-2 pr-3">
             {Publisher && loading === false ? (
               Publisher.map((data: PropsBrowse) => (
-                <BrowseCard
+                <GameCard
                   platform={data.platform}
                   popular_items={data.popular_items}
                   image={data.image}
-                  game1={data.game1}
-                  game2={data.game2}
-                  game3={data.game3}
+                  games={data.games}
+                  id={data.id}
+                  onClick={() => {
+                    navigate(`/genres/${data.platform}`, {
+                      state: {
+                        id: data.id,
+                        name: data.platform,
+                      },
+                    });
+                  }}
                 />
               ))
             ) : (
@@ -140,13 +171,20 @@ const Browse = () => {
           <div className="flex gap-x-7 justify-start overflow-x-scroll 2xl:overflow-x-hidden mb-2 pr-3">
             {Store && loading === false ? (
               Store.map((data: PropsBrowse) => (
-                <BrowseCard
+                <GameCard
                   platform={data.platform}
                   popular_items={data.popular_items}
                   image={data.image}
-                  game1={data.game1}
-                  game2={data.game2}
-                  game3={data.game3}
+                  games={data.games}
+                  id={data.id}
+                  onClick={() => {
+                    navigate(`/genres/${data.platform}`, {
+                      state: {
+                        id: data.id,
+                        name: data.platform,
+                      },
+                    });
+                  }}
                 />
               ))
             ) : (
@@ -167,13 +205,20 @@ const Browse = () => {
           <div className="flex gap-x-7 justify-start overflow-x-scroll 2xl:overflow-x-hidden mb-2 pr-3">
             {Tags && loading === false ? (
               Tags.map((data: PropsBrowse) => (
-                <BrowseCard
+                <GameCard
                   platform={data.platform}
                   popular_items={data.popular_items}
                   image={data.image}
-                  game1={data.game1}
-                  game2={data.game2}
-                  game3={data.game3}
+                  games={data.games}
+                  id={data.id}
+                  onClick={() => {
+                    navigate(`/genres/${data.platform}`, {
+                      state: {
+                        id: data.id,
+                        name: data.platform,
+                      },
+                    });
+                  }}
                 />
               ))
             ) : (
