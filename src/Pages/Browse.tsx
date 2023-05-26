@@ -29,7 +29,7 @@ const Browse = () => {
             </span>
           </div>
 
-          <div className="flex gap-x-7 justify-start overflow-x-scroll lg:overflow-x-hidden mb-2 pr-3">
+          <div className="flex gap-x-7 justify-start overflow-x-scroll 2xl:overflow-x-hidden mb-2 pr-3">
             {Genres && loading === false ? (
               Genres.map((data: PropsBrowse) => (
                 <BrowseCard
@@ -56,7 +56,7 @@ const Browse = () => {
               435,016 <IoIosArrowForward className="pt-2 md:pt-1" />
             </span>
           </div>
-          <div className="flex gap-x-7 justify-start overflow-x-scroll lg:overflow-x-hidden mb-2 pr-3">
+          <div className="flex gap-x-7 justify-start overflow-x-scroll 2xl:overflow-x-hidden mb-2 pr-3">
             {Developer && loading === false ? (
               Developer.map((data: PropsBrowse) => (
                 <BrowseCard
@@ -83,7 +83,7 @@ const Browse = () => {
               51 <IoIosArrowForward className="pt-2 md:pt-1" />
             </span>
           </div>
-          <div className="flex gap-x-7 justify-start overflow-x-scroll lg:overflow-x-hidden mb-2 pr-3">
+          <div className="flex gap-x-7 justify-start overflow-x-scroll 2xl:overflow-x-hidden mb-2 pr-3">
             {Platform && loading === false ? (
               Platform.map((data: PropsBrowse) => (
                 <BrowseCard
@@ -110,7 +110,7 @@ const Browse = () => {
               63,064 <IoIosArrowForward className="pt-2 md:pt-1" />
             </span>
           </div>
-          <div className="flex gap-x-7 justify-start overflow-x-scroll lg:overflow-x-hidden mb-2 pr-3">
+          <div className="flex gap-x-7 justify-start overflow-x-scroll 2xl:overflow-x-hidden mb-2 pr-3">
             {Publisher && loading === false ? (
               Publisher.map((data: PropsBrowse) => (
                 <BrowseCard
@@ -137,7 +137,7 @@ const Browse = () => {
               10 <IoIosArrowForward className="pt-2 md:pt-1" />
             </span>
           </div>
-          <div className="flex gap-x-7 justify-start overflow-x-scroll lg:overflow-x-hidden mb-2 pr-3">
+          <div className="flex gap-x-7 justify-start overflow-x-scroll 2xl:overflow-x-hidden mb-2 pr-3">
             {Store && loading === false ? (
               Store.map((data: PropsBrowse) => (
                 <BrowseCard
@@ -164,7 +164,7 @@ const Browse = () => {
               10,087 <IoIosArrowForward className="pt-2 md:pt-1" />
             </span>
           </div>
-          <div className="flex gap-x-7 justify-start overflow-x-scroll lg:overflow-x-hidden mb-2 pr-3">
+          <div className="flex gap-x-7 justify-start overflow-x-scroll 2xl:overflow-x-hidden mb-2 pr-3">
             {Tags && loading === false ? (
               Tags.map((data: PropsBrowse) => (
                 <BrowseCard

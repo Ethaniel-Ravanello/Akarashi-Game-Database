@@ -2,6 +2,7 @@ interface Tags {
   platform: string;
   image: string;
   popular_items: string;
+  id: number;
   game1: {
     name: string;
     player: string;
@@ -25,6 +26,7 @@ const Tags: Tags[] = [
     image:
       "https://images.hdqwalls.com/download/shionne-tales-of-arise-zr-1280x720.jpg",
     popular_items: "120,456",
+    id: 31,
     game1: {
       name: "Elden Ring",
       player: "5,833",
@@ -46,6 +48,7 @@ const Tags: Tags[] = [
     platform: "Mulitplayer",
     image: "https://wallpaperaccess.com/full/662210.png",
     popular_items: "10,567",
+    id: 7,
     game1: {
       name: "Valorant",
       player: "763",
@@ -66,6 +69,7 @@ const Tags: Tags[] = [
     platform: "RPG",
     image: "https://wallpapercave.com/wp/xvUeEkP.jpg",
     popular_items: "2,209",
+    id: 24,
     game1: {
       name: "The Elder Scroll V: Skyrim",
       player: "14,658",
@@ -86,6 +90,7 @@ const Tags: Tags[] = [
     platform: "Exploration",
     image: "https://wallpapercave.com/wp/wp7648520.jpg",
     popular_items: "879",
+    id: 6,
     game1: {
       name: "Star Wars Jedi: Survivor",
       player: "483",

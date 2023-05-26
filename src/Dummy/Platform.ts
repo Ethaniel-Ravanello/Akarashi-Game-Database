@@ -2,6 +2,7 @@ interface Platform {
   platform: string;
   image: string;
   popular_items: string;
+  id: number;
   game1: {
     name: string;
     player: string;
@@ -25,6 +26,7 @@ const Platform: Platform[] = [
     image:
       "https://wallsdesk.com/wp-content/uploads/2016/08/Counter-Strike-Global-Offensive-Wallpapers-and-Backgrounds.jpg",
     popular_items: "512,535",
+    id: 4,
     game1: {
       name: "Counter Strike: Global Offensive",
       player: "19,389",
@@ -43,9 +45,10 @@ const Platform: Platform[] = [
   },
 
   {
-    platform: "Playstation",
+    platform: "Playstation 4",
     image: "https://wallpapercave.com/wp/wp9041296.jpg",
     popular_items: "10,567",
+    id: 18,
     game1: {
       name: "God Of War: Ragnarok",
       player: "18,569",
@@ -67,6 +70,7 @@ const Platform: Platform[] = [
     image:
       "https://wallpapersmug.com/download/1024x768/cc9656/halo-infinite-2020-soldier.jpg",
     popular_items: "2,209",
+    id: 1,
     game1: {
       name: "Halo Infinite",
       player: "18,835",
@@ -87,6 +91,7 @@ const Platform: Platform[] = [
     platform: "Nintendo Switch",
     image: "https://wallpapercave.com/wp/7K7LOUq.jpg",
     popular_items: "879",
+    id: 7,
     game1: {
       name: "Bayonetta 2",
       player: "12.238",

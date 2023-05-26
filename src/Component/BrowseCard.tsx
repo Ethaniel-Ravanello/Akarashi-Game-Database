@@ -9,6 +9,7 @@ const BrowseCard = ({
   game1,
   game2,
   game3,
+  onClick,
 }: PropsBrowse) => {
   return (
     <div>
@@ -23,7 +24,10 @@ const BrowseCard = ({
 
           <div className="z-20 relative">
             <div className="w-fit mx-auto">
-              <h1 className="text-2xl font-bold flex justify-center pt-[3em] mb-1">
+              <h1
+                onClick={onClick}
+                className="text-2xl font-bold flex justify-center pt-[3em] mb-1"
+              >
                 {platform}
               </h1>
               <div className="w-full h-[2px] bg-primary-400 mb-3"></div>

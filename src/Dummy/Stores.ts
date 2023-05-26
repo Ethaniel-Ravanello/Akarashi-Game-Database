@@ -2,6 +2,7 @@ interface Stores {
   platform: string;
   image: string;
   popular_items: string;
+  id: number;
   game1: {
     name: string;
     player: string;
@@ -25,6 +26,7 @@ const Stores: Stores[] = [
     image:
       "https://www.hdwallpaper.nu/wp-content/uploads/2017/02/halflife_2-10.jpg",
     popular_items: "1,308",
+    id: 1,
     game1: {
       name: "Grand Theft Auto V",
       player: "19,394",
@@ -46,6 +48,7 @@ const Stores: Stores[] = [
     platform: "Playstation Stores",
     image: "https://images7.alphacoders.com/749/thumb-1920-749807.png",
     popular_items: "579",
+    id: 3,
     game1: {
       name: "God Of War: Ragnarok",
       player: "18,569",
@@ -66,6 +69,7 @@ const Stores: Stores[] = [
     platform: "XBOX Store",
     image: "https://wallpapercave.com/wp/wp1905495.jpg",
     popular_items: "2,209",
+    id: 2,
     game1: {
       name: "Grand Theft Auto V",
       player: "19,394",
@@ -86,6 +90,7 @@ const Stores: Stores[] = [
     platform: "App Store",
     image: "https://wallpapercave.com/wp/7zrUXEH.jpg",
     popular_items: "75,053",
+    id: 4,
     game1: {
       name: "Tomb Raider (2013)",
       player: "9.308",

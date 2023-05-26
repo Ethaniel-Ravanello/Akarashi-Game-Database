@@ -2,6 +2,7 @@ interface Publishers {
   platform: string;
   image: string;
   popular_items: string;
+  id: number;
   game1: {
     name: string;
     player: string;
@@ -23,6 +24,7 @@ const Publishers: Publishers[] = [
     platform: "Electronic Arts",
     image: "https://wallpapercave.com/wp/2LYC0WB.jpg",
     popular_items: "1,308",
+    id: 354,
     game1: {
       name: "Portal 2",
       player: "14,632",
@@ -44,6 +46,7 @@ const Publishers: Publishers[] = [
     platform: "Square Enix",
     image: "https://cdn.wallpapersafari.com/74/27/r7VteI.jpg",
     popular_items: "579",
+    id: 308,
     game1: {
       name: "Tomb Raider (2013)",
       player: "9.308",
@@ -65,6 +68,7 @@ const Publishers: Publishers[] = [
     image:
       "https://3.bp.blogspot.com/-mFCYInEaetM/UOXpy8xIVaI/AAAAAAAAUTs/tB3Verwf0gk/s1600/Far_Cry_3_Wallpaper.jpg",
     popular_items: "2,209",
+    id: 918,
     game1: {
       name: "Far Cry 3",
       player: "9.311",
@@ -85,6 +89,7 @@ const Publishers: Publishers[] = [
     platform: "Microsoft Studios",
     image: "https://cdn.wccftech.com/wp-content/uploads/2016/03/Alan-Wake.jpg",
     popular_items: "493",
+    id: 20987,
     game1: {
       name: "Alan Wake",
       player: "9.176",

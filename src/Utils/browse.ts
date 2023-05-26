@@ -17,6 +17,7 @@ interface PropsBrowse {
     player: string;
     id: number;
   };
+  onClick?: any;
 }
 
 export type { PropsBrowse };

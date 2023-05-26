@@ -2,6 +2,7 @@ interface Genres {
   platform: string;
   image: string;
   popular_items: string;
+  id: number;
   game1: {
     name: string;
     player: string;
@@ -25,6 +26,7 @@ const Genres: Genres[] = [
     image:
       "https://images.hdqwalls.com/download/battlefield-4-soldier-to-1280x720.jpg",
     popular_items: "172,591",
+    id: 4,
     game1: {
       name: "Red Dead Redemption 2",
       player: "19,389",
@@ -46,6 +48,7 @@ const Genres: Genres[] = [
     platform: "Indie",
     image: "https://wallpaperaccess.com/full/2743248.jpg",
     popular_items: "52,725",
+    id: 51,
     game1: {
       name: "Ori and The Will of The Wisps",
       player: "12,489",
@@ -67,6 +70,7 @@ const Genres: Genres[] = [
     image:
       "https://images.hdqwalls.com/download/cyberpunk-2077-girl-art-25-1280x720.jpg",
     popular_items: "132,331",
+    id: 3,
     game1: {
       name: "The Legend Of Zelda: Breath Of the Wild",
       player: "19,389",
@@ -84,23 +88,24 @@ const Genres: Genres[] = [
     },
   },
   {
-    platform: "Horror",
+    platform: "Strategy",
     image: "https://wallpapercave.com/wp/wp3001674.jpg",
-    popular_items: "9.120",
+    popular_items: "52,125",
+    id: 10,
     game1: {
-      name: "Outlast",
-      player: "7,231",
-      id: 3790,
+      name: "Sid Meier's CivilizationV",
+      player: "8,636",
+      id: 13633,
     },
     game2: {
-      name: "Fatal Frame III: The Tormented",
-      player: "3,765",
-      id: 3896,
+      name: "Company Of Heroes 2",
+      player: "8,557",
+      id: 10243,
     },
     game3: {
-      name: "Resident Evil 7: Biohazard",
-      player: "11,322",
-      id: 480,
+      name: "XCOM: Enemy Unknown",
+      player: "7,681",
+      id: 13910,
     },
   },
 ];

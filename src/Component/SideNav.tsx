@@ -72,7 +72,9 @@ const SideNav = ({ nav, setNav }: Props) => {
                 className="text-primary-400 group-hover:bg-primary-400 group-hover:text-primary-100 w-fit h-fit bg-primary-300 p-1.5 rounded-lg"
                 size={25}
               />
-              <p className="pt-1.5 ml-2">Genres</p>
+              <p onClick={() => navigate("/genres")} className="pt-1.5 ml-2">
+                Genres
+              </p>
             </li>
             <li className="text-xl group flex font-medium my-4 cursor-pointer">
               <IoCodeSlashSharp

@@ -2,6 +2,7 @@ interface Developer {
   platform: string;
   image: string;
   popular_items: string;
+  id: number;
   game1: {
     name: string;
     player: string;
@@ -24,6 +25,7 @@ const Developer: Developer[] = [
     platform: "Ubisoft",
     image: "https://img.wallpapersafari.com/desktop/1440/900/22/91/xNYv8a.jpg",
     popular_items: "334",
+    id: 405,
     game1: {
       name: "Assasing Creed IV: Black Flag",
       player: "9,308",
@@ -46,6 +48,7 @@ const Developer: Developer[] = [
     image:
       "https://www.wallpaperbetter.com/wallpaper/476/1013/99/battlefield-hardline-game-1080P-wallpaper-middle-size.jpg",
     popular_items: "325",
+    id: 109,
     game1: {
       name: "Dead Space (2008)",
       player: "8,588",
@@ -67,6 +70,7 @@ const Developer: Developer[] = [
     image:
       "https://images.hdqwalls.com/download/bloodborne-ps4-game-1280x720.jpg",
     popular_items: "552",
+    id: 6,
     game1: {
       name: "Bloodborne",
       player: "8,098",
@@ -88,6 +92,7 @@ const Developer: Developer[] = [
     image:
       "https://images.hdqwalls.com/download/1/nier-automata-4k-qu-1280x720.jpg",
     popular_items: "355",
+    id: 413,
     game1: {
       name: "Deus Ex Human Revolution",
       player: "9,799",
