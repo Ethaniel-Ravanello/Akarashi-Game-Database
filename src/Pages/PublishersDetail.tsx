@@ -6,7 +6,7 @@ import Card from "../Component/Card";
 import Spinner from "../Component/Spinner";
 import { MdKeyboardArrowRight, MdKeyboardArrowLeft } from "react-icons/md";
 
-const GenresDetail = () => {
+const PublishersDetail = () => {
   const { state } = useLocation();
   const { name, id } = state;
 
@@ -18,7 +18,7 @@ const GenresDetail = () => {
     setLoading(true);
     axios
       .get(
-        `https://api.rawg.io/api/games?key=3d27cad6bbee4c88bbdbe0f255aad396&page=${pageNum}&genres=${id}`
+        `https://api.rawg.io/api/games?key=3d27cad6bbee4c88bbdbe0f255aad396&page=${pageNum}&publishers=${id}`
       )
       .then((res) => {
         setData(res.data.results);
@@ -84,4 +84,4 @@ const GenresDetail = () => {
   );
 };
 
-export default GenresDetail;
+export default PublishersDetail;

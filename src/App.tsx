@@ -16,6 +16,9 @@ const DeveloperDetail = lazy(() => import("./Pages/DeveloperDetail"));
 const Platforms = lazy(() => import("./Pages/Platforms"));
 const PlatformsDetail = lazy(() => import("./Pages/PlatformsDetail"));
 
+const Publishers = lazy(() => import("./Pages/Publishers"));
+const PublishersDetail = lazy(() => import("./Pages/PublishersDetail"));
+
 function App() {
   return (
     <Suspense fallback={"LOADINGG..."}>
@@ -26,15 +29,23 @@ function App() {
             <Route path="/browse" element={<Browse />} />
             <Route path="/genres" element={<Genres />} />
             <Route path="/genres/:genresdetail" element={<GenresDetail />} />
-            <Route path="/developer" element={<Developer />} />
+
+            <Route path="/developers" element={<Developer />} />
             <Route
-              path="/developer/:developerdetail"
+              path="/developers/:developerdetail"
               element={<DeveloperDetail />}
             />
+
             <Route path="/platforms" element={<Platforms />} />
             <Route
               path="/platforms/:platformsdetail"
               element={<PlatformsDetail />}
+            />
+
+            <Route path="/publishers" element={<Publishers />} />
+            <Route
+              path="/publishers/:publishersdetail"
+              element={<PublishersDetail />}
             />
           </Routes>
         </Layout>

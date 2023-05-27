@@ -36,7 +36,7 @@ const Developer = () => {
   return (
     <div className="w-full h-full mt-[100px] px-10">
       <div className="text-primary-400">
-        <h1 className="text-7xl font-semibold mb-2">Platform</h1>
+        <h1 className="text-7xl font-semibold mb-5">Platform</h1>
         <div className="flex justify-around flex-wrap">
           {platform && loading === false ? (
             platform.map((data: any) => (

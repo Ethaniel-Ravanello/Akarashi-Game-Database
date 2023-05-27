@@ -57,7 +57,10 @@ const SideNav = ({ nav, setNav }: Props) => {
             Browse
           </h4>
           <ul>
-            <li className="text-xl group flex font-medium my-4 cursor-pointer">
+            <li
+              onClick={() => navigate("/platforms")}
+              className="text-xl group flex font-medium my-4 cursor-pointer"
+            >
               <IoGameController
                 className="text-primary-400 group-hover:bg-primary-400 group-hover:text-primary-100 w-fit h-fit bg-primary-300 p-1.5 rounded-lg"
                 size={25}
@@ -74,28 +77,40 @@ const SideNav = ({ nav, setNav }: Props) => {
               />
               <p className="pt-1.5 ml-2">Genres</p>
             </li>
-            <li className="text-xl group flex font-medium my-4 cursor-pointer">
+            <li
+              onClick={() => navigate("/developers")}
+              className="text-xl group flex font-medium my-4 cursor-pointer"
+            >
               <IoCodeSlashSharp
                 className="text-primary-400 group-hover:bg-primary-400 group-hover:text-primary-100 w-fit h-fit bg-primary-300 p-1.5 rounded-lg"
                 size={25}
               />
               <p className="pt-1.5 ml-2">Developers</p>
             </li>
-            <li className="text-xl group flex font-medium my-4 cursor-pointer">
+            <li
+              onClick={() => navigate("/publishers")}
+              className="text-xl group flex font-medium my-4 cursor-pointer"
+            >
               <MdPublish
                 className="text-primary-400 group-hover:bg-primary-400 group-hover:text-primary-100 w-fit h-fit bg-primary-300 p-1.5 rounded-lg"
                 size={25}
               />
               <p className="pt-1.5 ml-2">Publishers</p>
             </li>
-            <li className="text-xl group flex font-medium my-4 cursor-pointer">
+            <li
+              onClick={() => navigate("/stores")}
+              className="text-xl group flex font-medium my-4 cursor-pointer"
+            >
               <FaStore
                 className="text-primary-400 group-hover:bg-primary-400 group-hover:text-primary-100 w-fit h-fit bg-primary-300 p-1.5 rounded-lg"
                 size={25}
               />
               <p className="pt-1.5 ml-2">Stores</p>
             </li>
-            <li className="text-xl group flex font-medium my-4 cursor-pointer">
+            <li
+              onClick={() => navigate("/tags")}
+              className="text-xl group flex font-medium my-4 cursor-pointer"
+            >
               <FaHashtag
                 className="text-primary-400 group-hover:bg-primary-400 group-hover:text-primary-100 w-fit h-fit bg-primary-300 p-1.5 rounded-lg"
                 size={25}

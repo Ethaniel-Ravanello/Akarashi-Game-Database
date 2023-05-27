@@ -61,7 +61,7 @@ const Browse = () => {
 
         <div className="px-5">
           <div
-            onClick={() => navigate("/developer")}
+            onClick={() => navigate("/developers")}
             className="w-fit  font-bold mb-5 flex cursor-pointer hover:text-primary-600"
           >
             <h2 className="underline-offset-4 underline text-2xl pt-1.5 md:text-4xl md:pt-1">
@@ -134,7 +134,10 @@ const Browse = () => {
         </div>
 
         <div className="px-5">
-          <div className="w-fit  font-bold mb-5 flex cursor-pointer hover:text-primary-600">
+          <div
+            onClick={() => navigate("/publishers")}
+            className="w-fit  font-bold mb-5 flex cursor-pointer hover:text-primary-600"
+          >
             <h2 className="underline-offset-4 underline text-2xl pt-1.5 md:text-4xl md:pt-1">
               Publishers
             </h2>

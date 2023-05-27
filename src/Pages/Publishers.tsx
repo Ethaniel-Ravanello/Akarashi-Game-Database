@@ -6,21 +6,21 @@ import GameCard from "../Component/GameCard";
 import Spinner from "../Component/Spinner";
 import { MdKeyboardArrowRight, MdKeyboardArrowLeft } from "react-icons/md";
 
-const Developer = () => {
-  const [developer, setdeveloper] = useState([]);
+const publishers = () => {
+  const [publishers, setPublishers] = useState([]);
   const [loading, setLoading] = useState(false);
   const [pageNum, setPageNum] = useState(1);
 
   const navigate = useNavigate();
 
-  const getDeveloper = (pageNum: number) => {
+  const getPublishers = (pageNum: number) => {
     setLoading(true);
     axios
       .get(
-        `https://api.rawg.io/api/developers?key=3d27cad6bbee4c88bbdbe0f255aad396&page=${pageNum}`
+        `https://api.rawg.io/api/publishers?key=3d27cad6bbee4c88bbdbe0f255aad396&page=${pageNum}`
       )
       .then((res) => {
-        setdeveloper(res.data.results);
+        setPublishers(res.data.results);
         console.log(res.data.results);
         setLoading(false);
       })
@@ -30,16 +30,16 @@ const Developer = () => {
   };
 
   useEffect(() => {
-    getDeveloper(pageNum);
+    getPublishers(pageNum);
   }, []);
 
   return (
     <div className="w-full h-full mt-[100px] px-10">
       <div className="text-primary-400">
-        <h1 className="text-7xl font-semibold mb-5">Developer</h1>
+        <h1 className="text-7xl font-semibold mb-5">Publishers</h1>
         <div className="flex justify-around flex-wrap">
-          {developer && loading === false ? (
-            developer.map((data: any) => (
+          {publishers && loading === false ? (
+            publishers.map((data: any) => (
               <GameCard
                 platform={data.name}
                 image={data.image_background}
@@ -48,7 +48,7 @@ const Developer = () => {
                 games={data.games}
                 key={data.id}
                 onClick={() => {
-                  navigate(`/developer/${data.slug}`, {
+                  navigate(`/publishers/${data.slug}`, {
                     state: {
                       id: data.id,
                       name: data.name,
@@ -61,32 +61,32 @@ const Developer = () => {
             <Spinner />
           )}
         </div>
-        <div className=" flex w-fit h-[100px] mx-auto mt-20 pt-10">
-          <MdKeyboardArrowLeft
-            onClick={() => {
-              setPageNum(pageNum - 1);
-              getDeveloper(pageNum - 1);
-            }}
-            className="bg-primary-300 active:bg-primary-200 w-fit h-fit mr-5 text-primary-400 rounded-xl cursor-pointer"
-            size={50}
-          />
+      </div>
+      <div className=" flex w-fit h-[100px] mx-auto mt-20 pt-10">
+        <MdKeyboardArrowLeft
+          onClick={() => {
+            setPageNum(pageNum - 1);
+            getPublishers(pageNum - 1);
+          }}
+          className="bg-primary-300 active:bg-primary-200 w-fit h-fit mr-5 text-primary-400 rounded-xl cursor-pointer"
+          size={50}
+        />
 
-          <p className="text-primary-400 font-bold text-xl pt-[11px]">
-            {pageNum}
-          </p>
+        <p className="text-primary-400 font-bold text-xl pt-[11px]">
+          {pageNum}
+        </p>
 
-          <MdKeyboardArrowRight
-            onClick={() => {
-              setPageNum(pageNum + 1);
-              getDeveloper(pageNum + 1);
-            }}
-            className="bg-primary-300 active:bg-primary-200 w-fit h-fit ml-5 text-primary-400 rounded-xl cursor-pointer"
-            size={50}
-          />
-        </div>
+        <MdKeyboardArrowRight
+          onClick={() => {
+            setPageNum(pageNum + 1);
+            getPublishers(pageNum + 1);
+          }}
+          className="bg-primary-300 active:bg-primary-200 w-fit h-fit ml-5 text-primary-400 rounded-xl cursor-pointer"
+          size={50}
+        />
       </div>
     </div>
   );
 };
 
-export default Developer;
+export default publishers;
