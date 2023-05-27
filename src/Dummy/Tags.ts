@@ -12,7 +12,7 @@ interface Tags {
 
 const Tags: Tags[] = [
   {
-    platform: "Singleadded",
+    platform: "Singleplayer",
     image:
       "https://images.hdqwalls.com/download/shionne-tales-of-arise-zr-1280x720.jpg",
     popular_items: "120,456",
@@ -36,7 +36,7 @@ const Tags: Tags[] = [
     ],
   },
   {
-    platform: "Mulitadded",
+    platform: "Mulitplayer",
     image: "https://wallpaperaccess.com/full/662210.png",
     popular_items: "10,567",
     id: 7,

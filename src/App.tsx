@@ -6,9 +6,15 @@ import "./App.css";
 
 const Home = lazy(() => import("./Pages/Home"));
 const Browse = lazy(() => import("./Pages/Browse"));
+
 const Genres = lazy(() => import("./Pages/Genres"));
 const GenresDetail = lazy(() => import("./Pages/GenresDetail"));
+
 const Developer = lazy(() => import("./Pages/Developer"));
+const DeveloperDetail = lazy(() => import("./Pages/DeveloperDetail"));
+
+const Platforms = lazy(() => import("./Pages/Platforms"));
+const PlatformsDetail = lazy(() => import("./Pages/PlatformsDetail"));
 
 function App() {
   return (
@@ -21,6 +27,15 @@ function App() {
             <Route path="/genres" element={<Genres />} />
             <Route path="/genres/:genresdetail" element={<GenresDetail />} />
             <Route path="/developer" element={<Developer />} />
+            <Route
+              path="/developer/:developerdetail"
+              element={<DeveloperDetail />}
+            />
+            <Route path="/platforms" element={<Platforms />} />
+            <Route
+              path="/platforms/:platformsdetail"
+              element={<PlatformsDetail />}
+            />
           </Routes>
         </Layout>
       </BrowserRouter>
