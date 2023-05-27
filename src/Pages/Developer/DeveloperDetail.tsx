@@ -2,11 +2,11 @@ import { useLocation } from "react-router";
 import axios from "axios";
 import { useState, useEffect } from "react";
 
-import Card from "../Component/Card";
-import Spinner from "../Component/Spinner";
+import Card from "../../Component/Card";
+import Spinner from "../../Component/Spinner";
 import { MdKeyboardArrowRight, MdKeyboardArrowLeft } from "react-icons/md";
 
-const PlatformsDetail = () => {
+const DeveloperDetail = () => {
   const { state } = useLocation();
   const { name, id } = state;
 
@@ -18,7 +18,7 @@ const PlatformsDetail = () => {
     setLoading(true);
     axios
       .get(
-        `https://api.rawg.io/api/games?key=3d27cad6bbee4c88bbdbe0f255aad396&page=${pageNum}&platforms=${id}`
+        `https://api.rawg.io/api/games?key=3d27cad6bbee4c88bbdbe0f255aad396&page=${pageNum}&developers=${id}`
       )
       .then((res) => {
         setData(res.data.results);
@@ -36,7 +36,7 @@ const PlatformsDetail = () => {
 
   return (
     <div className="text-primary-400  mt-[130px] px-[1.5em]">
-      <h1 className="text-5xl mb-10">Games for {name}</h1>
+      <h1 className="text-5xl mb-10">{name} games</h1>
       <div className="flex justify-around flex-wrap gapx-x-5">
         {data && loading === false ? (
           data.map((data: any) => (
@@ -84,4 +84,4 @@ const PlatformsDetail = () => {
   );
 };
 
-export default PlatformsDetail;
+export default DeveloperDetail;

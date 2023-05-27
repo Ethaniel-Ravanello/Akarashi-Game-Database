@@ -59,7 +59,7 @@ const Home = () => {
           Popular Games
         </div>
 
-        <div className="flex justify-around flex-wrap mx-auto mb-2 gap-x-8 ">
+        <div className="flex justify-center flex-wrap mx-auto mb-2 gap-x-8 ">
           {data && loading === false ? (
             data.map((data: Data) => (
               <Card

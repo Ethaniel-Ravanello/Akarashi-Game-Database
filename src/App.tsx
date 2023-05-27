@@ -7,17 +7,22 @@ import "./App.css";
 const Home = lazy(() => import("./Pages/Home"));
 const Browse = lazy(() => import("./Pages/Browse"));
 
-const Genres = lazy(() => import("./Pages/Genres"));
-const GenresDetail = lazy(() => import("./Pages/GenresDetail"));
+const Genres = lazy(() => import("./Pages/Genres/Genres"));
+const GenresDetail = lazy(() => import("./Pages/Genres/GenresDetail"));
 
-const Developer = lazy(() => import("./Pages/Developer"));
-const DeveloperDetail = lazy(() => import("./Pages/DeveloperDetail"));
+const Developer = lazy(() => import("./Pages/Developer/Developer"));
+const DeveloperDetail = lazy(() => import("./Pages/Developer/DeveloperDetail"));
 
-const Platforms = lazy(() => import("./Pages/Platforms"));
-const PlatformsDetail = lazy(() => import("./Pages/PlatformsDetail"));
+const Platforms = lazy(() => import("./Pages/Platforms/Platforms"));
+const PlatformsDetail = lazy(() => import("./Pages/Platforms/PlatformsDetail"));
 
-const Publishers = lazy(() => import("./Pages/Publishers"));
-const PublishersDetail = lazy(() => import("./Pages/PublishersDetail"));
+const Publishers = lazy(() => import("./Pages/Publishers/Publishers"));
+const PublishersDetail = lazy(
+  () => import("./Pages/Publishers/PublishersDetail")
+);
+
+const Stores = lazy(() => import("./Pages/Stores/Stores"));
+const StoresDetail = lazy(() => import("./Pages/Stores/StoresDetail"));
 
 function App() {
   return (
@@ -47,6 +52,9 @@ function App() {
               path="/publishers/:publishersdetail"
               element={<PublishersDetail />}
             />
+
+            <Route path="/stores" element={<Stores />} />
+            <Route path="/stores/:storesdetail" element={<StoresDetail />} />
           </Routes>
         </Layout>
       </BrowserRouter>

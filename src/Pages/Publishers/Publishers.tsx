@@ -2,8 +2,8 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router";
 import axios from "axios";
 
-import GameCard from "../Component/GameCard";
-import Spinner from "../Component/Spinner";
+import GameCard from "../../Component/GameCard";
+import Spinner from "../../Component/Spinner";
 import { MdKeyboardArrowRight, MdKeyboardArrowLeft } from "react-icons/md";
 
 const publishers = () => {
@@ -36,8 +36,10 @@ const publishers = () => {
   return (
     <div className="w-full h-full mt-[100px] px-10">
       <div className="text-primary-400">
-        <h1 className="text-7xl font-semibold mb-5">Publishers</h1>
-        <div className="flex justify-around flex-wrap">
+        <h1 className="text-3xl md:text-4xl lg:text-7xl font-semibold mb-5">
+          Publishers
+        </h1>
+        <div className="flex justify-center flex-wrap gap-x-5">
           {publishers && loading === false ? (
             publishers.map((data: any) => (
               <GameCard
@@ -62,7 +64,7 @@ const publishers = () => {
           )}
         </div>
       </div>
-      <div className=" flex w-fit h-[100px] mx-auto mt-20 pt-10">
+      <div className=" flex w-fit h-[100px] mx-auto mt-2 pt-2">
         <MdKeyboardArrowLeft
           onClick={() => {
             setPageNum(pageNum - 1);

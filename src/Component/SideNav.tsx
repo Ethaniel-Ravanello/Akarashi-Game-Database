@@ -51,14 +51,20 @@ const SideNav = ({ nav, setNav }: Props) => {
             Following
           </h3>
           <h4
-            onClick={() => navigate("/browse")}
+            onClick={() => {
+              navigate("/browse");
+              setNav(!nav);
+            }}
             className="w-fit font-bold text-xl mt-7 hover:text-primary-600 cursor-pointer"
           >
             Browse
           </h4>
           <ul>
             <li
-              onClick={() => navigate("/platforms")}
+              onClick={() => {
+                navigate("/platforms");
+                setNav(!nav);
+              }}
               className="text-xl group flex font-medium my-4 cursor-pointer"
             >
               <IoGameController
@@ -68,7 +74,10 @@ const SideNav = ({ nav, setNav }: Props) => {
               <p className="pt-1.5 ml-2">Platforms</p>
             </li>
             <li
-              onClick={() => navigate("/genres")}
+              onClick={() => {
+                navigate("/genres");
+                setNav(!nav);
+              }}
               className="text-xl group flex font-medium my-4 cursor-pointer"
             >
               <BiGame
@@ -78,7 +87,10 @@ const SideNav = ({ nav, setNav }: Props) => {
               <p className="pt-1.5 ml-2">Genres</p>
             </li>
             <li
-              onClick={() => navigate("/developers")}
+              onClick={() => {
+                navigate("/developers");
+                setNav(!nav);
+              }}
               className="text-xl group flex font-medium my-4 cursor-pointer"
             >
               <IoCodeSlashSharp
@@ -88,7 +100,10 @@ const SideNav = ({ nav, setNav }: Props) => {
               <p className="pt-1.5 ml-2">Developers</p>
             </li>
             <li
-              onClick={() => navigate("/publishers")}
+              onClick={() => {
+                navigate("/publishers");
+                setNav(!nav);
+              }}
               className="text-xl group flex font-medium my-4 cursor-pointer"
             >
               <MdPublish
@@ -98,7 +113,10 @@ const SideNav = ({ nav, setNav }: Props) => {
               <p className="pt-1.5 ml-2">Publishers</p>
             </li>
             <li
-              onClick={() => navigate("/stores")}
+              onClick={() => {
+                navigate("/stores");
+                setNav(!nav);
+              }}
               className="text-xl group flex font-medium my-4 cursor-pointer"
             >
               <FaStore
@@ -108,7 +126,10 @@ const SideNav = ({ nav, setNav }: Props) => {
               <p className="pt-1.5 ml-2">Stores</p>
             </li>
             <li
-              onClick={() => navigate("/tags")}
+              onClick={() => {
+                navigate("/tags");
+                setNav(!nav);
+              }}
               className="text-xl group flex font-medium my-4 cursor-pointer"
             >
               <FaHashtag
@@ -118,44 +139,115 @@ const SideNav = ({ nav, setNav }: Props) => {
               <p className="pt-1.5 ml-2">Tags</p>
             </li>
           </ul>
+
           <h4 className="w-fit font-bold text-xl mt-10">Platforms</h4>
+
           <ul>
-            <li className="text-xl group flex font-medium my-4 cursor-pointer">
+            <li
+              onClick={() => {
+                navigate("/platforms/pc", {
+                  state: {
+                    id: 4,
+                    name: "Pc",
+                  },
+                });
+              }}
+              className="text-xl group flex font-medium my-4 cursor-pointer"
+            >
               <BsWindows
                 className="text-primary-400 group-hover:bg-primary-400 group-hover:text-primary-100 w-fit h-fit bg-primary-300 p-1.5 rounded-lg"
                 size={25}
               />
               <p className="pt-1.5 ml-2">PC</p>
             </li>
-            <li className="text-xl group flex font-medium my-4 cursor-pointer">
+
+            <li
+              onClick={() => {
+                navigate("/platforms/playstation4", {
+                  state: {
+                    id: 18,
+                    name: "Playstation 4",
+                  },
+                });
+                setNav(!nav);
+              }}
+              className="text-xl group flex font-medium my-4 cursor-pointer"
+            >
               <FaPlaystation
                 className="text-primary-400 group-hover:bg-primary-400 group-hover:text-primary-100 w-fit h-fit bg-primary-300 p-1.5 rounded-lg"
                 size={25}
               />
               <p className="pt-1.5 ml-2">Playstation 4</p>
             </li>
-            <li className="text-xl group flex font-medium my-4 cursor-pointer">
+
+            <li
+              onClick={() => {
+                navigate("/platforms/xbox-one", {
+                  state: {
+                    id: 1,
+                    name: "Xbox One",
+                  },
+                });
+                setNav(!nav);
+              }}
+              className="text-xl group flex font-medium my-4 cursor-pointer"
+            >
               <FaXbox
                 className="text-primary-400 group-hover:bg-primary-400 group-hover:text-primary-100 w-fit h-fit bg-primary-300 p-1.5 rounded-lg"
                 size={25}
               />
               <p className="pt-1.5 ml-2">Xbox One</p>
             </li>
-            <li className="text-xl group flex font-medium my-4 cursor-pointer">
+
+            <li
+              onClick={() => {
+                navigate("/platforms/nintendo-switch", {
+                  state: {
+                    id: 7,
+                    name: "Nintendo Switch",
+                  },
+                });
+                setNav(!nav);
+              }}
+              className="text-xl group flex font-medium my-4 cursor-pointer"
+            >
               <SiNintendoswitch
                 className="text-primary-400 group-hover:bg-primary-400 group-hover:text-primary-100 w-fit h-fit bg-primary-300 p-1.5 rounded-lg"
                 size={25}
               />
               <p className="pt-1.5 ml-2 w-full">Nintendo Switch</p>
             </li>
-            <li className="text-xl group flex font-medium my-4 cursor-pointer">
+
+            <li
+              onClick={() =>
+                navigate("/platforms/ios", {
+                  state: {
+                    id: 3,
+                    name: "iOs",
+                  },
+                })
+              }
+              className="text-xl group flex font-medium my-4 cursor-pointer"
+            >
               <AiFillApple
                 className="text-primary-400 group-hover:bg-primary-400 group-hover:text-primary-100 w-fit h-fit bg-primary-300 p-1.5 rounded-lg"
                 size={25}
               />
               <p className="pt-1.5 ml-2">iOS</p>
             </li>
-            <li className="text-xl group flex font-medium my-4 cursor-pointer">
+
+            <li
+              onClick={() => {
+                navigate("/platforms/android", {
+                  state: {
+                    id: 21,
+                    name: "Android",
+                  },
+                });
+                setNav(!nav);
+              }}
+              className="text-xl group flex font-medium my-4 cursor-pointer"
+            >
               <AiFillAndroid
                 className="text-primary-400 group-hover:bg-primary-400 group-hover:text-primary-100 w-fit h-fit bg-primary-300 p-1.5 rounded-lg"
                 size={25}
@@ -163,49 +255,105 @@ const SideNav = ({ nav, setNav }: Props) => {
               <p className="pt-1.5 ml-2">Android</p>
             </li>
           </ul>
+
           <h4 className="w-fit font-bold text-xl mt-10">Genre</h4>
           <ul>
-            <li className="text-xl group flex font-medium my-4 cursor-pointer">
-              <BsWindows
-                className="text-primary-400 group-hover:bg-primary-400 group-hover:text-primary-100 w-fit h-fit bg-primary-300 p-1.5 rounded-lg"
-                size={25}
+            <li
+              onClick={() => {
+                navigate("/genres/action", {
+                  state: {
+                    id: 4,
+                    name: "Action",
+                  },
+                });
+                setNav(!nav);
+              }}
+              className="text-xl group flex font-medium my-4 cursor-pointer"
+            >
+              <img
+                src="https://d2.alternativeto.net/dist/s/nier-automata_527481_full.jpg?format=jpg&width=1200&height=1200&mode=crop"
+                className="w-[35px] h-[35px] rounded-lg object-cover"
               />
-              <p className="pt-1.5 ml-2">PC</p>
+              <p className="pt-1 ml-2">Action</p>
+            </li>
+            <li
+              onClick={() => {
+                navigate("/genres/strategy", {
+                  state: {
+                    id: 10,
+                    name: "Strategy",
+                  },
+                });
+                setNav(!nav);
+              }}
+              className="text-xl group flex font-medium my-4 cursor-pointer"
+            >
+              <img
+                src="https://i2.wp.com/www.pcgamespunch.com/wp-content/uploads/2013/08/Arma-3.jpg?fit=1920%2C1080https://i2.wp.com/www.pcgamespunch.com/wp-content/uploads/2013/08/Arma-3.jpg?fit=1920%2C1080"
+                className="w-[35px] h-[35px] rounded-lg object-cover"
+              />
+              <p className="pt-1 ml-2">Strategy</p>
+            </li>
+            <li
+              onClick={() => {
+                navigate("/genres/rpg", {
+                  state: {
+                    id: 5,
+                    name: "RPG",
+                  },
+                });
+                setNav(!nav);
+              }}
+              className="text-xl group flex font-medium my-4 cursor-pointer"
+            >
+              <img
+                src="https://images4.alphacoders.com/608/608644.png"
+                className="w-[35px] h-[35px] rounded-lg object-cover"
+              />
+              <p className="pt-1.5 ml-2">RPG</p>
             </li>
             <li className="text-xl group flex font-medium my-4 cursor-pointer">
-              <FaPlaystation
-                className="text-primary-400 group-hover:bg-primary-400 group-hover:text-primary-100 w-fit h-fit bg-primary-300 p-1.5 rounded-lg"
-                size={25}
+              <img
+                src="https://wallpaperaccess.com/full/152246.jpg"
+                className="w-[35px] h-[35px] rounded-lg object-cover"
               />
-              <p className="pt-1.5 ml-2">Playstation 4</p>
+              <p className="pt-1.5 ml-2">Shooter</p>
             </li>
-            <li className="text-xl group flex font-medium my-4 cursor-pointer">
-              <FaXbox
-                className="text-primary-400 group-hover:bg-primary-400 group-hover:text-primary-100 w-fit h-fit bg-primary-300 p-1.5 rounded-lg"
-                size={25}
+            <li
+              onClick={() => {
+                navigate("/genres/adventure", {
+                  state: {
+                    id: 3,
+                    name: "Adventure",
+                  },
+                });
+                setNav(!nav);
+              }}
+              className="text-xl group flex font-medium my-4 cursor-pointer"
+            >
+              <img
+                src="https://static3.srcdn.com/wordpress/wp-content/uploads/2020/09/Horizon-Zero-Dawn-PC-Aloy-scratching-her-head.jpg"
+                className="w-[35px] h-[35px] rounded-lg object-cover"
               />
-              <p className="pt-1.5 ml-2">Xbox One</p>
+              <p className="pt-1.5 ml-2">Adventure</p>
             </li>
-            <li className="text-xl group flex font-medium my-4 cursor-pointer">
-              <SiNintendoswitch
-                className="text-primary-400 group-hover:bg-primary-400 group-hover:text-primary-100 w-fit h-fit bg-primary-300 p-1.5 rounded-lg"
-                size={25}
+            <li
+              onClick={() => {
+                navigate("/genres/puzzle", {
+                  state: {
+                    id: 7,
+                    name: "Puzzle",
+                  },
+                });
+                setNav(!nav);
+              }}
+              className="text-xl group flex font-medium my-4 cursor-pointer"
+            >
+              <img
+                src="https://www.gameshub.com/wp-content/uploads/sites/5/2022/09/legend-of-zelda-tears-of-the-kingdom.jpeg"
+                className="w-[35px] h-[35px] rounded-lg object-cover"
               />
-              <p className="pt-1.5 ml-2">Nintendo Switch</p>
-            </li>
-            <li className="text-xl group flex font-medium my-4 cursor-pointer">
-              <AiFillApple
-                className="text-primary-400 group-hover:bg-primary-400 group-hover:text-primary-100 w-fit h-fit bg-primary-300 p-1.5 rounded-lg"
-                size={25}
-              />
-              <p className="pt-1.5 ml-2">iOS</p>
-            </li>
-            <li className="text-xl group flex font-medium my-4 cursor-pointer">
-              <AiFillAndroid
-                className="text-primary-400 group-hover:bg-primary-400 group-hover:text-primary-100 w-fit h-fit bg-primary-300 p-1.5 rounded-lg"
-                size={25}
-              />
-              <p className="pt-1.5 ml-2">Android</p>
+              <p className="pt-1.5 ml-2">Puzzle</p>
             </li>
           </ul>
         </aside>

@@ -44,7 +44,7 @@ const Navbar = () => {
         <RxHamburgerMenu
           onClick={() => setNav(!nav)}
           size={30}
-          className="text-primary-400 w-fit h-fit pt-9 md:mr-10 cursor-pointer"
+          className="text-primary-400 w-fit h-fit pt-8 md:mr-10 cursor-pointer"
         />
         {/* Side Nav */}
         <SideNav nav={nav} setNav={setNav} />

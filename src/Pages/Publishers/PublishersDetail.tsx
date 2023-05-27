@@ -2,8 +2,8 @@ import { useLocation } from "react-router";
 import axios from "axios";
 import { useState, useEffect } from "react";
 
-import Card from "../Component/Card";
-import Spinner from "../Component/Spinner";
+import Card from "../../Component/Card";
+import Spinner from "../../Component/Spinner";
 import { MdKeyboardArrowRight, MdKeyboardArrowLeft } from "react-icons/md";
 
 const PublishersDetail = () => {
