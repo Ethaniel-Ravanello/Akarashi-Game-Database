@@ -28,6 +28,7 @@ const Navbar = () => {
 
   const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
     if (event.key === "Enter") {
+      navigate(`/search?query=${filter}`);
       dispatch(toggleRefetch());
     }
   };

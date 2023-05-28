@@ -1,4 +1,7 @@
-import React, { ReactNode } from "react";
+import React, { ReactNode, useEffect } from "react";
+import { useLocation } from "react-router";
+import { useDispatch } from "react-redux";
+import { clearFilter } from "../features/searchSlice";
 
 import Navbar from "./Navbar";
 
@@ -7,6 +10,12 @@ interface Props {
 }
 
 const Layout = ({ children }: Props) => {
+  const location = useLocation();
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(clearFilter());
+  }, [location.pathname]);
   return (
     <div>
       <Navbar />

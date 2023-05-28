@@ -1,11 +1,14 @@
 import { lazy, Suspense } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Navbar from "./Component/Navbar";
+
 import Layout from "./Component/Layout";
 import "./App.css";
 
 const Home = lazy(() => import("./Pages/Home"));
 const Browse = lazy(() => import("./Pages/Browse"));
+const Search = lazy(() => import("./Pages/Search"));
+
+const Games = lazy(() => import("./Pages/Games/Games"));
 
 const Genres = lazy(() => import("./Pages/Genres/Genres"));
 const GenresDetail = lazy(() => import("./Pages/Genres/GenresDetail"));
@@ -32,6 +35,10 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/browse" element={<Browse />} />
+            <Route path="/search" element={<Search />} />
+
+            <Route path="/games" element={<Games />} />
+
             <Route path="/genres" element={<Genres />} />
             <Route path="/genres/:genresdetail" element={<GenresDetail />} />
 

@@ -36,7 +36,7 @@ const Home = () => {
   function goToTop() {
     window.scrollTo({ top: 700, behavior: "smooth" });
   }
-
+  console.log(filter);
   return (
     <div>
       <div className="max-w-[1920px] h-[100vh] mx-auto relative">

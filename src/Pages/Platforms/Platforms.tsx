@@ -32,7 +32,6 @@ const Developer = () => {
   useEffect(() => {
     getPlatform(pageNum);
   }, []);
-
   return (
     <div className="w-full h-full mt-[100px] px-10">
       <div className="text-primary-400">

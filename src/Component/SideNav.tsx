@@ -45,6 +45,12 @@ const SideNav = ({ nav, setNav }: Props) => {
             Home
           </h3>
           <h3
+            onClick={() => navigate("/games")}
+            className="w-fit font-bold text-2xl mt-10 hover:text-primary-600 cursor-pointer"
+          >
+            All Games
+          </h3>
+          <h3
             onClick={() => navigate("/")}
             className="w-fit font-bold text-2xl mt-10 hover:text-primary-600 cursor-pointer"
           >
