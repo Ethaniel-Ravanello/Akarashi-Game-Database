@@ -1,6 +1,7 @@
 interface Data {
   id: number;
   name: string;
+  slug: string;
   background_image: string;
   metacritic: number;
   rating: number;

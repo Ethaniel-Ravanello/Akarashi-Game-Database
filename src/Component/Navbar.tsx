@@ -81,7 +81,7 @@ const Navbar = () => {
         >
           <AiFillLinkedin className="text-primary-400 my-auto" size={50} />
         </a>
-        <a href="https://github.com/FE10-Ethaniel-Ravanello" target="_blank">
+        <a href="https://github.com/Ethaniel-Ravanello" target="_blank">
           <AiFillGithub className="text-primary-400 my-auto" size={50} />
         </a>
       </div>

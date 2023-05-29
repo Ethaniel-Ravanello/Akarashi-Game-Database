@@ -47,6 +47,7 @@ const Games = () => {
           data.map((data: Data) => (
             <Card
               key={data.id}
+              slug={data.slug}
               id={data.id}
               name={data.name}
               image={data.background_image}

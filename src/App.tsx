@@ -9,6 +9,7 @@ const Browse = lazy(() => import("./Pages/Browse"));
 const Search = lazy(() => import("./Pages/Search"));
 
 const Games = lazy(() => import("./Pages/Games/Games"));
+const GamesDetail = lazy(() => import("./Pages/Games/GamesDetail"));
 
 const Genres = lazy(() => import("./Pages/Genres/Genres"));
 const GenresDetail = lazy(() => import("./Pages/Genres/GenresDetail"));
@@ -41,6 +42,7 @@ function App() {
             <Route path="/search" element={<Search />} />
 
             <Route path="/games" element={<Games />} />
+            <Route path="/games/:gamesdetail" element={<GamesDetail />} />
 
             <Route path="/genres" element={<Genres />} />
             <Route path="/genres/:genresdetail" element={<GenresDetail />} />
