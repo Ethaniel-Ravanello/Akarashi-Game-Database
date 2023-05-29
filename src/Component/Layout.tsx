@@ -4,6 +4,7 @@ import { useDispatch } from "react-redux";
 import { clearFilter } from "../features/searchSlice";
 
 import Navbar from "./Navbar";
+import { toggleRefetch } from "../features/refetchSlice";
 
 interface Props {
   children: ReactNode;
@@ -14,8 +15,11 @@ const Layout = ({ children }: Props) => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(clearFilter());
-  }, [location.pathname]);
+    if (location.pathname !== "/search") {
+      dispatch(clearFilter());
+    }
+    dispatch(toggleRefetch());
+  }, [location.pathname, dispatch]);
   return (
     <div>
       <Navbar />

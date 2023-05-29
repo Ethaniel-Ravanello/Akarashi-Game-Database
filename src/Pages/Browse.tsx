@@ -38,6 +38,7 @@ const Browse = () => {
             {Genres && loading === false ? (
               Genres.map((data: PropsBrowse) => (
                 <GameCard
+                  key={data.id}
                   platform={data.platform}
                   popular_items={data.popular_items}
                   image={data.image}
@@ -75,6 +76,7 @@ const Browse = () => {
             {Developer && loading === false ? (
               Developer.map((data: PropsBrowse) => (
                 <GameCard
+                  key={data.id}
                   platform={data.platform}
                   popular_items={data.popular_items}
                   image={data.image}
@@ -112,6 +114,7 @@ const Browse = () => {
             {Platform && loading === false ? (
               Platform.map((data: PropsBrowse) => (
                 <GameCard
+                  key={data.id}
                   platform={data.platform}
                   popular_items={data.popular_items}
                   image={data.image}
@@ -149,6 +152,7 @@ const Browse = () => {
             {Publisher && loading === false ? (
               Publisher.map((data: PropsBrowse) => (
                 <GameCard
+                  key={data.id}
                   platform={data.platform}
                   popular_items={data.popular_items}
                   image={data.image}
@@ -171,7 +175,10 @@ const Browse = () => {
         </div>
 
         <div className="px-5">
-          <div className="w-fit  font-bold mb-5 flex cursor-pointer hover:text-primary-600">
+          <div
+            onClick={() => navigate("/stores")}
+            className="w-fit  font-bold mb-5 flex cursor-pointer hover:text-primary-600"
+          >
             <h2 className="underline-offset-4 underline text-2xl pt-1.5 md:text-4xl md:pt-1">
               Stores
             </h2>
@@ -183,6 +190,7 @@ const Browse = () => {
             {Store && loading === false ? (
               Store.map((data: PropsBrowse) => (
                 <GameCard
+                  key={data.id}
                   platform={data.platform}
                   popular_items={data.popular_items}
                   image={data.image}
@@ -217,6 +225,7 @@ const Browse = () => {
             {Tags && loading === false ? (
               Tags.map((data: PropsBrowse) => (
                 <GameCard
+                  key={data.id}
                   platform={data.platform}
                   popular_items={data.popular_items}
                   image={data.image}

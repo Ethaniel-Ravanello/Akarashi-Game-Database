@@ -27,6 +27,9 @@ const PublishersDetail = lazy(
 const Stores = lazy(() => import("./Pages/Stores/Stores"));
 const StoresDetail = lazy(() => import("./Pages/Stores/StoresDetail"));
 
+const Tags = lazy(() => import("./Pages/Tags/Tags"));
+const TagsDetail = lazy(() => import("./Pages/Tags/TagsDetail"));
+
 function App() {
   return (
     <Suspense fallback={"LOADINGG..."}>
@@ -62,6 +65,9 @@ function App() {
 
             <Route path="/stores" element={<Stores />} />
             <Route path="/stores/:storesdetail" element={<StoresDetail />} />
+
+            <Route path="/tags" element={<Tags />} />
+            <Route path="/tags/:tagsdetail" element={<TagsDetail />} />
           </Routes>
         </Layout>
       </BrowserRouter>

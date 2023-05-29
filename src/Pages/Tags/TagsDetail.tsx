@@ -1,56 +1,45 @@
-import { useEffect, useState } from "react";
-import { useSelector, useDispatch } from "react-redux";
 import { useLocation } from "react-router";
-import type { Data } from "../Utils/data";
 import axios from "axios";
+import { useState, useEffect } from "react";
 
-import Card from "../Component/Card";
-import Spinner from "../Component/Spinner";
-
+import Card from "../../Component/Card";
+import Spinner from "../../Component/Spinner";
 import { MdKeyboardArrowRight, MdKeyboardArrowLeft } from "react-icons/md";
 
-const Search = () => {
+const TagsDetail = () => {
+  const { state } = useLocation();
+  const { name, id } = state;
+
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);
   const [page, setPage] = useState(1);
-
-  const filter = useSelector((state: any) => state.gameFilter.filter);
-  const fetching = useSelector((state: any) => state.gameRefetch.refetch);
-
-  const location = useLocation();
 
   const getData = (pageNum: number) => {
     setLoading(true);
     axios
       .get(
-        `https://api.rawg.io/api/games?key=3d27cad6bbee4c88bbdbe0f255aad396&page=${pageNum}&search=${filter}`
+        `https://api.rawg.io/api/games?key=3d27cad6bbee4c88bbdbe0f255aad396&page=${pageNum}&tags=${id}`
       )
       .then((res) => {
         setData(res.data.results);
         console.log(res.data.results);
         setLoading(false);
+      })
+      .catch((err) => {
+        console.log(err);
       });
   };
 
   useEffect(() => {
     getData(page);
-  }, [fetching]);
+  }, []);
 
-  function goToTop() {
-    window.scrollTo({ top: 700, behavior: "smooth" });
-  }
-
-  console.log(filter);
-  console.log(location.pathname);
   return (
-    <div className="w-[100%] h-[100%] mx-auto px-[30px] mt-[150px]">
-      <div className="text-primary-400 mt-[20px] text-4xl font-bold mb-8">
-        Search for {filter}
-      </div>
-
-      <div className="flex justify-center flex-wrap mx-auto mb-2 gap-x-8 ">
+    <div className="text-primary-400  mt-[130px] px-[1.5em]">
+      <h1 className="text-5xl mb-10">{name} games</h1>
+      <div className="flex justify-around flex-wrap gapx-x-5">
         {data && loading === false ? (
-          data.map((data: Data) => (
+          data.map((data: any) => (
             <Card
               key={data.id}
               id={data.id}
@@ -75,7 +64,6 @@ const Search = () => {
           onClick={() => {
             setPage(page - 1);
             getData(page - 1);
-            goToTop();
           }}
           className="bg-primary-300 active:bg-primary-200 w-fit h-fit mr-5 text-primary-400 rounded-xl cursor-pointer"
           size={50}
@@ -87,7 +75,6 @@ const Search = () => {
           onClick={() => {
             setPage(page + 1);
             getData(page + 1);
-            goToTop();
           }}
           className="bg-primary-300 active:bg-primary-200 w-fit h-fit ml-5 text-primary-400 rounded-xl cursor-pointer"
           size={50}
@@ -97,4 +84,4 @@ const Search = () => {
   );
 };
 
-export default Search;
+export default TagsDetail;

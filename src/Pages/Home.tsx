@@ -1,12 +1,15 @@
 import { useEffect, useState } from "react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import type { Data } from "../Utils/data";
+import { useLocation } from "react-router";
 import axios from "axios";
 
 import Card from "../Component/Card";
 import Spinner from "../Component/Spinner";
 
 import { MdKeyboardArrowRight, MdKeyboardArrowLeft } from "react-icons/md";
+import { clearFilter } from "../features/searchSlice";
+import { clearRefetch } from "../features/refetchSlice";
 
 const Home = () => {
   const [data, setData] = useState([]);
@@ -15,6 +18,9 @@ const Home = () => {
 
   const filter = useSelector((state: any) => state.gameFilter.filter);
   const fetching = useSelector((state: any) => state.gameRefetch.refetch);
+
+  const location = useLocation();
+  const dispatch = useDispatch();
 
   const getData = (pageNum: number) => {
     setLoading(true);
@@ -30,6 +36,7 @@ const Home = () => {
   };
 
   useEffect(() => {
+    dispatch(clearRefetch());
     getData(page);
   }, [fetching]);
 
@@ -37,6 +44,7 @@ const Home = () => {
     window.scrollTo({ top: 700, behavior: "smooth" });
   }
   console.log(filter);
+  console.log(location.pathname);
   return (
     <div>
       <div className="max-w-[1920px] h-[100vh] mx-auto relative">

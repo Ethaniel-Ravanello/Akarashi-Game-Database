@@ -100,7 +100,7 @@ const Tags: Tags[] = [
       {
         name: "Hogwarts Legacy",
         added: "1,690",
-        id: 398405,
+        id: 906547,
       },
     ],
   },

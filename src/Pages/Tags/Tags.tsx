@@ -6,21 +6,21 @@ import GameCard from "../../Component/GameCard";
 import Spinner from "../../Component/Spinner";
 import { MdKeyboardArrowRight, MdKeyboardArrowLeft } from "react-icons/md";
 
-const stores = () => {
-  const [stores, setStores] = useState([]);
+const tags = () => {
+  const [tags, setTags] = useState([]);
   const [loading, setLoading] = useState(false);
   const [pageNum, setPageNum] = useState(1);
 
   const navigate = useNavigate();
 
-  const getStores = (pageNum: number) => {
+  const getTags = (pageNum: number) => {
     setLoading(true);
     axios
       .get(
-        `https://api.rawg.io/api/stores?key=3d27cad6bbee4c88bbdbe0f255aad396`
+        `https://api.rawg.io/api/tags?key=3d27cad6bbee4c88bbdbe0f255aad396&page=${pageNum}`
       )
       .then((res) => {
-        setStores(res.data.results);
+        setTags(res.data.results);
         console.log(res.data.results);
         setLoading(false);
       })
@@ -30,18 +30,18 @@ const stores = () => {
   };
 
   useEffect(() => {
-    getStores(pageNum);
+    getTags(pageNum);
   }, []);
 
   return (
     <div className="w-full h-full mt-[100px] px-10">
       <div className="text-primary-400">
         <h1 className="text-3xl md:text-4xl lg:text-7xl font-semibold mb-5">
-          Stores
+          Tags
         </h1>
         <div className="flex justify-center flex-wrap gap-x-5">
-          {stores && loading === false ? (
-            stores.map((data: any) => (
+          {tags && loading === false ? (
+            tags.map((data: any) => (
               <GameCard
                 platform={data.name}
                 image={data.image_background}
@@ -50,7 +50,7 @@ const stores = () => {
                 games={data.games}
                 key={data.id}
                 onClick={() => {
-                  navigate(`/stores/${data.slug}`, {
+                  navigate(`/tags/${data.slug}`, {
                     state: {
                       id: data.id,
                       name: data.name,
@@ -64,8 +64,31 @@ const stores = () => {
           )}
         </div>
       </div>
+      <div className=" flex w-fit h-[100px] mx-auto mt-2 pt-2">
+        <MdKeyboardArrowLeft
+          onClick={() => {
+            setPageNum(pageNum - 1);
+            getTags(pageNum - 1);
+          }}
+          className="bg-primary-300 active:bg-primary-200 w-fit h-fit mr-5 text-primary-400 rounded-xl cursor-pointer"
+          size={50}
+        />
+
+        <p className="text-primary-400 font-bold text-xl pt-[11px]">
+          {pageNum}
+        </p>
+
+        <MdKeyboardArrowRight
+          onClick={() => {
+            setPageNum(pageNum + 1);
+            getTags(pageNum + 1);
+          }}
+          className="bg-primary-300 active:bg-primary-200 w-fit h-fit ml-5 text-primary-400 rounded-xl cursor-pointer"
+          size={50}
+        />
+      </div>
     </div>
   );
 };
 
-export default stores;
+export default tags;

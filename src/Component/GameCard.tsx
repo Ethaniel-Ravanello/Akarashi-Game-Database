@@ -55,7 +55,7 @@ const GameCard = ({
 
               {games.slice(0, 3).map((data: any) => (
                 <div key={data.id} className="flex justify-between my-2">
-                  <p className="hover:text-primary-600 underline underline-offset-4 cursor-pointer">
+                  <p className="hover:text-primary-600 underline underline-offset-4 cursor-pointer max-w-[180px] md:max-w-[250px]">
                     {data.name}
                   </p>
                   <div className="flex w-[80px] justify-between">
