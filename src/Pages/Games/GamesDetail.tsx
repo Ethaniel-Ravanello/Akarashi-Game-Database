@@ -14,6 +14,8 @@ const GamesDetail = () => {
     description: "",
     platforms: [],
     genres: [],
+    released: "",
+    developers: [],
   });
   const [screenshots, setScreenshots] = useState([
     {
