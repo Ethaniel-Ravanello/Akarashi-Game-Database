@@ -2,14 +2,14 @@ import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import type { Data } from "../Utils/data";
 import { useLocation } from "react-router";
+import { clearRefetch } from "../features/refetchSlice";
 import axios from "axios";
 
 import Card from "../Component/Card";
 import Spinner from "../Component/Spinner";
 
 import { MdKeyboardArrowRight, MdKeyboardArrowLeft } from "react-icons/md";
-import { clearFilter } from "../features/searchSlice";
-import { clearRefetch } from "../features/refetchSlice";
+import Banner from "/Banner.jpg";
 
 const Home = () => {
   const [data, setData] = useState([]);
@@ -48,8 +48,9 @@ const Home = () => {
   return (
     <div>
       <div className="max-w-[1920px] h-[100vh] mx-auto relative">
-        <div className=" h-full rounded-xl bg-[url('./Banner.jpg')] bg-fixed bg-center">
-          <div className=" w-full h-full inset-0 absolute rounded-xl bg-primary-100 bg-opacity-80"></div>
+        <div className=" h-full rounded-xl">
+          <img src={Banner} alt="Banner background" className="w-full h-full" />
+          <div className=" w-full h-full inset-0 absolute bg-primary-100 bg-opacity-80"></div>
         </div>
 
         <div className="absolute mt-[300px] inset-0 text-center">
