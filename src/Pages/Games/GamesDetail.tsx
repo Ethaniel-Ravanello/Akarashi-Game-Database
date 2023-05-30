@@ -157,6 +157,22 @@ const GamesDetail = () => {
                   ))}
                 </div>
               </div>
+
+              <div className="mt-10">
+                <p className="font-bold text-primary-300">Released Date</p>
+                <p>{games.released}</p>
+              </div>
+
+              <div className="ml-10 mt-10">
+                <p className="font-bold text-primary-300">Developer</p>
+                <div className="flex flex-wrap gap-x-2">
+                  {games.developers?.map((data: any) => (
+                    <p className="w-fit underline underline-offset-4">
+                      {data.name},
+                    </p>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
 
