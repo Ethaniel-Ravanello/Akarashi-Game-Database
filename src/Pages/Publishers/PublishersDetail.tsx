@@ -43,6 +43,7 @@ const PublishersDetail = () => {
             <Card
               key={data.id}
               id={data.id}
+              slug={data.slug}
               name={data.name}
               image={data.background_image}
               metas={data.metacritic}

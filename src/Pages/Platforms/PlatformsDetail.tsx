@@ -41,6 +41,7 @@ const PlatformsDetail = () => {
           data.map((data: any) => (
             <Card
               key={data.id}
+              slug={data.slug}
               id={data.id}
               name={data.name}
               image={data.background_image}

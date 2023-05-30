@@ -43,6 +43,7 @@ const DeveloperDetail = () => {
             <Card
               key={data.id}
               id={data.id}
+              slug={data.slu}
               name={data.name}
               image={data.background_image}
               metas={data.metacritic}
