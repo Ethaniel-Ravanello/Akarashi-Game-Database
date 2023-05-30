@@ -36,7 +36,6 @@ const GamesDetail = () => {
   useEffect(() => {
     fetchData();
   }, []);
-  console.log(id);
   return (
     <div className="w-full h-full mt-[100px] text-primary-400">
       <div className="w-full h-[100vh] relative">
