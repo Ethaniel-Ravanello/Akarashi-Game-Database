@@ -19,7 +19,6 @@ const Home = () => {
   const filter = useSelector((state: any) => state.gameFilter.filter);
   const fetching = useSelector((state: any) => state.gameRefetch.refetch);
 
-  const location = useLocation();
   const dispatch = useDispatch();
 
   const getData = (pageNum: number) => {
@@ -30,7 +29,6 @@ const Home = () => {
       )
       .then((res) => {
         setData(res.data.results);
-        console.log(res.data.results);
         setLoading(false);
       });
   };
@@ -43,8 +41,6 @@ const Home = () => {
   function goToTop() {
     window.scrollTo({ top: 700, behavior: "smooth" });
   }
-  console.log(filter);
-  console.log(location.pathname);
   return (
     <div>
       <div className="max-w-[1920px] h-[100vh] mx-auto relative">
@@ -52,7 +48,7 @@ const Home = () => {
           <img
             src={Banner}
             alt="Banner background"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover im"
           />
           <div className=" w-full h-full inset-0 absolute bg-primary-100 bg-opacity-80"></div>
         </div>

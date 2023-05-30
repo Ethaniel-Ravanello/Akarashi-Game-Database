@@ -27,7 +27,6 @@ const Search = () => {
       )
       .then((res) => {
         setData(res.data.results);
-        console.log(res.data.results);
         setLoading(false);
       });
   };
@@ -40,8 +39,6 @@ const Search = () => {
     window.scrollTo({ top: 700, behavior: "smooth" });
   }
 
-  console.log(filter);
-  console.log(location.pathname);
   return (
     <div className="w-[100%] h-[100%] mx-auto px-[30px] mt-[150px]">
       <div className="text-primary-400 mt-[20px] text-4xl font-bold mb-8">
