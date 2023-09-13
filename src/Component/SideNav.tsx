@@ -39,19 +39,28 @@ const SideNav = ({ nav, setNav }: Props) => {
         <h2 className="mt-4 font-semibold text-2xl">AKARASHI</h2>
         <aside className="">
           <h3
-            onClick={() => navigate("/")}
+            onClick={() => {
+              navigate("/");
+              setNav(!nav);
+            }}
             className="w-fit font-bold text-2xl mt-10 hover:text-primary-600 cursor-pointer"
           >
             Home
           </h3>
           <h3
-            onClick={() => navigate("/games")}
+            onClick={() => {
+              navigate("/games");
+              setNav(!nav);
+            }}
             className="w-fit font-bold text-2xl mt-10 hover:text-primary-600 cursor-pointer"
           >
             All Games
           </h3>
           <h3
-            onClick={() => navigate("/")}
+            onClick={() => {
+              navigate("/");
+              setNav(!nav);
+            }}
             className="w-fit font-bold text-2xl mt-10 hover:text-primary-600 cursor-pointer"
           >
             Following
