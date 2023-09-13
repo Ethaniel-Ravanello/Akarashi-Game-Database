@@ -50,7 +50,7 @@ const Developer = () => {
                 games={data.games}
                 key={data.id}
                 onClick={() => {
-                  navigate(`/developer/${data.slug}`, {
+                  navigate(`/developers/${data.slug}`, {
                     state: {
                       id: data.id,
                       name: data.name,

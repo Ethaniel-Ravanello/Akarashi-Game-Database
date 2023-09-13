@@ -25,7 +25,7 @@ const Home = () => {
     setLoading(true);
     axios
       .get(
-        `https://api.rawg.io/api/games?key=3d27cad6bbee4c88bbdbe0f255aad396&page=${pageNum}&search=${filter}`
+        `https://api.rawg.io/api/games?key=3d27cad6bbee4c88bbdbe0f255aad396&page=${pageNum}`
       )
       .then((res) => {
         setData(res.data.results);

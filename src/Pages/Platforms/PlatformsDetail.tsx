@@ -32,7 +32,7 @@ const PlatformsDetail = () => {
 
   useEffect(() => {
     getData(page);
-  }, []);
+  }, [id, name]);
   return (
     <div className="text-primary-400  mt-[130px] px-[1.5em]">
       <h1 className="text-5xl mb-10">Games for {name}</h1>

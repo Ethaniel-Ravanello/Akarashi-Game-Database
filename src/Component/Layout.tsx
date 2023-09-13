@@ -19,7 +19,7 @@ const Layout = ({ children }: Props) => {
       dispatch(clearFilter());
     }
     dispatch(toggleRefetch());
-  }, [location.pathname, dispatch]);
+  }, [location.pathname]);
   return (
     <div>
       <Navbar />

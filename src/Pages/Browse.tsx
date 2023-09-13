@@ -83,7 +83,7 @@ const Browse = () => {
                   games={data.games}
                   id={data.id}
                   onClick={() => {
-                    navigate(`/genres/${data.platform}`, {
+                    navigate(`/developers/${data.platform}`, {
                       state: {
                         id: data.id,
                         name: data.platform,
@@ -159,7 +159,7 @@ const Browse = () => {
                   games={data.games}
                   id={data.id}
                   onClick={() => {
-                    navigate(`/genres/${data.platform}`, {
+                    navigate(`/publishers/${data.platform}`, {
                       state: {
                         id: data.id,
                         name: data.platform,
@@ -197,7 +197,7 @@ const Browse = () => {
                   games={data.games}
                   id={data.id}
                   onClick={() => {
-                    navigate(`/genres/${data.platform}`, {
+                    navigate(`/stores/${data.platform}`, {
                       state: {
                         id: data.id,
                         name: data.platform,
@@ -232,7 +232,7 @@ const Browse = () => {
                   games={data.games}
                   id={data.id}
                   onClick={() => {
-                    navigate(`/genres/${data.platform}`, {
+                    navigate(`/tags/${data.platform}`, {
                       state: {
                         id: data.id,
                         name: data.platform,
