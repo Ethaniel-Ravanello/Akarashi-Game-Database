@@ -32,7 +32,7 @@ const GenresDetail = () => {
 
   useEffect(() => {
     getData(page);
-  }, []);
+  }, [name, id]);
 
   return (
     <div className="text-primary-400  mt-[130px] px-[1.5em]">

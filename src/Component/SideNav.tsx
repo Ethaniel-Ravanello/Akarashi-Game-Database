@@ -311,7 +311,7 @@ const SideNav = ({ nav, setNav }: Props) => {
             </li>
             <li
               onClick={() => {
-                navigate("/genres/rpg", {
+                navigate("/genres/RPG", {
                   state: {
                     id: 5,
                     name: "RPG",
@@ -327,7 +327,18 @@ const SideNav = ({ nav, setNav }: Props) => {
               />
               <p className="pt-1.5 ml-2">RPG</p>
             </li>
-            <li className="text-xl group flex font-medium my-4 cursor-pointer">
+            <li
+              onClick={() => {
+                navigate("/genres/shooter", {
+                  state: {
+                    id: 2,
+                    name: "Shooter",
+                  },
+                });
+                setNav(!nav);
+              }}
+              className="text-xl group flex font-medium my-4 cursor-pointer"
+            >
               <img
                 src="https://wallpaperaccess.com/full/152246.jpg"
                 className="w-[35px] h-[35px] rounded-lg object-cover"
