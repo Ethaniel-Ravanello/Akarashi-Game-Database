@@ -75,10 +75,7 @@ const GamesDetail = () => {
   console.log(screenshots);
   console.log(imageData);
   return (
-    <div
-      // onClick={() => setShowModal(false)}
-      className="w-full h-full mt-[100px] text-primary-400"
-    >
+    <div className="w-full h-full mt-[100px] text-primary-400">
       <div className="w-full h-[100vh] absolute">
         <img
           className="w-full h-full object-cover opacity-30"
@@ -221,7 +218,7 @@ const GamesDetail = () => {
                     setImageData({ url: data.image });
                   }}
                   src={data.image}
-                  className="w-[200px] h-[100px] object-cover rounded-lg m-2 hover:cursor-pointer"
+                  className="w-[200px] h-[100px] object-cover rounded-lg m-2 hover:cursor-pointer hover:scale-105 transition-transform duration-300"
                   alt=""
                 />
               ))}
