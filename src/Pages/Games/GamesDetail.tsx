@@ -29,7 +29,9 @@ const GamesDetail = () => {
   const [trailer, setTrailer] = useState([]);
   const [showFullDescription, setShowFullDescription] = useState(false);
   const [showModal, setShowModal] = useState(false);
-  const [imageData, setImageData] = useState({});
+  const [imageData, setImageData] = useState({
+    url: "",
+  });
 
   const { state } = useLocation();
   const { id } = state;
@@ -216,7 +218,7 @@ const GamesDetail = () => {
                 <img
                   onClick={() => {
                     setShowModal(true);
-                    setImageData({ id: data.id, url: data.image });
+                    setImageData({ url: data.image });
                   }}
                   src={data.image}
                   className="w-[200px] h-[100px] object-cover rounded-lg m-2 hover:cursor-pointer"
