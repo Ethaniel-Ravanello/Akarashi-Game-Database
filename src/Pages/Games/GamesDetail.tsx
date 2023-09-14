@@ -1,6 +1,9 @@
 import { useLocation } from "react-router";
 import axios from "axios";
+import { useNavigate } from "react-router";
 import { useState, useEffect } from "react";
+
+import Modal from "../../Component/Modal";
 
 const GamesDetail = () => {
   const [games, setGames] = useState({
@@ -22,8 +25,11 @@ const GamesDetail = () => {
       image: "",
     },
   ]);
+  const navigate = useNavigate();
   const [trailer, setTrailer] = useState([]);
   const [showFullDescription, setShowFullDescription] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+  const [imageData, setImageData] = useState({});
 
   const { state } = useLocation();
   const { id } = state;
@@ -64,8 +70,13 @@ const GamesDetail = () => {
     fetchData();
   }, []);
   console.log(games);
+  console.log(screenshots);
+  console.log(imageData);
   return (
-    <div className="w-full h-full mt-[100px] text-primary-400">
+    <div
+      // onClick={() => setShowModal(false)}
+      className="w-full h-full mt-[100px] text-primary-400"
+    >
       <div className="w-full h-[100vh] absolute">
         <img
           className="w-full h-full object-cover opacity-30"
@@ -74,14 +85,34 @@ const GamesDetail = () => {
         />
         <div className="absolute bottom-0 bg-gradient-to-b from-primary-transparent via-primary-100 to-primary-100 opacity-100 rounded-b-lg h-[80vh] w-full"></div>
       </div>
+      {showModal ? (
+        <Modal
+          showModal={showModal}
+          setShowModal={setShowModal}
+          data={imageData}
+        />
+      ) : (
+        ""
+      )}
 
       <div className="w-full h-full lg:px-[100px] lg:pt-[100px] relative z-10">
         <div className="flex justify-between">
           <div className="w-[60%]">
             <p className="text-primary-600">
-              <span className="hover:text-primary-400">HOME</span> /
-              <span className="hover:text-primary-400 mx-2">GAMES</span> /
-              {games.name?.toUpperCase()}
+              <span
+                onClick={() => navigate("/")}
+                className="hover:text-primary-400 hover:cursor-pointer"
+              >
+                HOME
+              </span>
+              /
+              <span
+                onClick={() => navigate("/games")}
+                className="hover:text-primary-400 mx-2 hover:cursor-pointer"
+              >
+                GAMES
+              </span>{" "}
+              /{games.name?.toUpperCase()}
             </p>
 
             <h1 className="text-5xl font-bold mb-10">{games.name}</h1>
@@ -183,8 +214,12 @@ const GamesDetail = () => {
             <div className="flex justify-center flex-wrap">
               {screenshots.map((data) => (
                 <img
+                  onClick={() => {
+                    setShowModal(true);
+                    setImageData({ id: data.id, url: data.image });
+                  }}
                   src={data.image}
-                  className="w-[200px] h-[100px] object-cover rounded-lg m-2"
+                  className="w-[200px] h-[100px] object-cover rounded-lg m-2 hover:cursor-pointer"
                   alt=""
                 />
               ))}
